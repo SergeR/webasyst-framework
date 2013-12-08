@@ -26,7 +26,7 @@ function smarty_function_wa_pagination($params, &$smarty)
         'total' => 1,
         'nb' => 1,
         'prev' => '&larr;',
-        'next' => '&rarr',
+        'next' => '&rarr;',
         'url' => '',
         'attrs' => array(),
         'page' => 0,
@@ -45,6 +45,13 @@ function smarty_function_wa_pagination($params, &$smarty)
     
     if ($total < 2) {
         return $html;
+    }
+
+    if(empty($url)) {
+        $url = $_SERVER['REQUEST_URI'];
+        if(strpos($url, '?') !== FALSE) {
+            $url = substr($url, 0, strpos($url, '?'));
+        }
     }
 
     $page = $page ?: waRequest::get('page', 1);
@@ -99,7 +106,7 @@ function smarty_function_wa_pagination($params, &$smarty)
 
         $page_url = $url . ($url_params ? "?$url_params" : '');
 
-        if($page > 1) {
+        if($page > 1 && $url) {
             $html .= "<li{$li_attr_str}><a{$link_attr_str} href=\"{$page_url}\">{$prev}</a></li>";
         } else {
             $html .= "<li{$li_disabled_attr_str}>{$prev}</li>";
