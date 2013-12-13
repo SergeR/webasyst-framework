@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/developer
+ */
 class developerBackendAction extends developerAction
 {
     public function execute()

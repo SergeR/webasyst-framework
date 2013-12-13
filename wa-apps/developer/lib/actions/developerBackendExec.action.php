@@ -3,6 +3,8 @@
 /**
  * Get PHP and smarty code from POST, execute and echo output to browser.
  * Sounds crazy, isn't it?
+ * 
+ * @package wa-apps/developer
  */
 class developerBackendExecAction extends waViewAction
 {

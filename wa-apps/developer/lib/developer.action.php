@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/developer
+ */
 class developerAction extends waViewAction
 {
     public function display($clear_assign = true)

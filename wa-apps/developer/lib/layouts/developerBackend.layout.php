@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/developer
+ */
 class developerBackendLayout extends waLayout
 {
     public function execute()
