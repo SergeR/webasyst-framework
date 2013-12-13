@@ -16,6 +16,8 @@
  * Доступен в бэкенде по урлу dummy/?action=records
  * Подробнее о маршрутизации в бэкенде:
  * http://www.webasyst.com/ru/framework/docs/dev/backend-routing/
+ * 
+ * @package wa-apps/dummy
  */
 class dummyBackendRecordsAction extends waViewAction
 {

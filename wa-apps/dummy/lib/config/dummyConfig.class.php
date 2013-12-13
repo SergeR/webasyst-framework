@@ -12,12 +12,19 @@
  * Должен быть унаследован waAppConfig
  * В экшенах и контроллерах записи можно будет легко получить:
  * $this->getConfig()->getRecords()
+ * 
+ * @package wa-apps/dummy
  */
 class dummyConfig extends waAppConfig
 {
-	// variable for storing loaded records
-	// переменная для хранения загруженных записей
+    /**
+	 * variable for storing loaded records
+	 * переменная для хранения загруженных записей
+     *
+     * @var mixed 
+     */
 	protected $records = null;
+    
 	/**
 	 * Method for retrieving all records
 	 * Метод возвращающий все записи

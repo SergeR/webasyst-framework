@@ -6,6 +6,8 @@
  *
  * Класс для описания настроек прав доступа для приложения
  * http://www.webasyst.com/ru/framework/docs/dev/access-rights/
+ * 
+ * @package wa-apps/dummy
  */
 class dummyRightConfig extends waRightConfig
 {

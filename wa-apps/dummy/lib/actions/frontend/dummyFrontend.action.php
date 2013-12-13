@@ -14,6 +14,8 @@
  * 
  * Подробнее о маршрутизации во фронтенде:
  * http://www.webasyst.com/ru/framework/docs/dev/routing/
+ * 
+ * @package wa-apps/dummy
  */
 class dummyFrontendAction extends waViewAction
 {
