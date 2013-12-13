@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/sms
+ */
 abstract class waSMSAdapter
 {
     protected $options;
