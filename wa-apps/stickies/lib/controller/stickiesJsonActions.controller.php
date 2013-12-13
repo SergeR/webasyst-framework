@@ -2,7 +2,7 @@
 /**
  *
  * @author WebAsyst Team
- *
+ * @package wa-apps/stickies
  */
 
 class stickiesJsonActionsController extends waJsonActions

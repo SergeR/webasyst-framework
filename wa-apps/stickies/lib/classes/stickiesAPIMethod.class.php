@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/stickies
+ */
 abstract class stickiesAPIMethod extends waAPIMethod
 {
     protected function checkRights($sheet_id)

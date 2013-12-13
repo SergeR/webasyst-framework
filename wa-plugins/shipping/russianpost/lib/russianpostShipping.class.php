@@ -21,7 +21,7 @@
  * @property string $bank_account_number
  * @property string $bik
  * @property string $color
- *
+ * @package wa-plugin/shipping
  */
 class russianpostShipping extends waShipping
 {

@@ -7,6 +7,7 @@
  * @property-read array $rate
  * @property-read string $delivery_time
  * @property-read string $prompt_address
+ * @package wa-plugin/shipping
  */
 class pickupShipping extends waShipping
 {

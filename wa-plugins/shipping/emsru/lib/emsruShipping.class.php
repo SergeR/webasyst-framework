@@ -1,6 +1,7 @@
 <?php
 /**
  * @property double $surcharge
+ * @package wa-plugin/shipping
  */
 class emsruShipping extends waShipping
 {

@@ -8,6 +8,7 @@
  * @property-read string $zip
  * @property-read string $package_type
  * @property-read string $product_code
+ * @package wa-plugin/shipping
  */
 class dhlShipping extends waShipping
 {

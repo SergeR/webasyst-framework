@@ -2,7 +2,7 @@
 /**
  *
  * @author WebAsyst Team
- * @package Stickies
+ * @package wa-apps/stickies
  *
  */
 class stickiesBackendAction extends waViewAction

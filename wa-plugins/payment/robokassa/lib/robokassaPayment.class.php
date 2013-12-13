@@ -9,7 +9,7 @@
  * @property-read string $gateway_currency
  * @property-read string $merchant_currency
  *
- *
+ * @package wa-plugin/payment
  */
 class robokassaPayment extends waPayment implements waIPayment
 {

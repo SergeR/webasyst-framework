@@ -13,6 +13,7 @@
  * @property string $zip
  * @property string $city
  * @property string $address
+ * @package wa-plugin/shipping
  */
 class fedexShipping extends waShipping
 {

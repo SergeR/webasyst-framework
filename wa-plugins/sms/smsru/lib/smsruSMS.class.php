@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-plugin/sms
+ */
 class smsruSMS extends waSMSAdapter
 {
     public function getControls()

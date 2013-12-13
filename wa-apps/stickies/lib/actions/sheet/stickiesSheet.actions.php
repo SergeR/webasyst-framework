@@ -2,7 +2,7 @@
 /**
  *
  * @author WebAsyst Team
- *
+ * @package wa-apps/stickies/sheet
  */
 
 class stickiesSheetActions extends stickiesJsonActionsController

@@ -11,6 +11,7 @@
  * @property-read string $cust_inn
  * @property-read string $inn
  * @property-read string $kpp
+ * @package wa-plugin/payment
  */
 class invoicejurPayment extends waPayment implements waIPayment, waIPaymentCapture
 {

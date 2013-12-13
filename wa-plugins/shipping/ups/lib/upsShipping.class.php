@@ -11,6 +11,7 @@
  * @property string $country
  * @property string $city
  * @property string $zip
+ * @package wa-plugin/shipping
  */
 class upsShipping extends waShipping
 {

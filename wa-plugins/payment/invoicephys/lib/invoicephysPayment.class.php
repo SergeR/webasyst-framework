@@ -10,6 +10,7 @@
  * @property-read string $kpp
  * @property-read string $second_name
  * @property-read string $bank_name
+ * @package wa-plugin/payment
  */
 class invoicephysPayment extends waPayment implements waIPayment, waIPaymentCapture
 {

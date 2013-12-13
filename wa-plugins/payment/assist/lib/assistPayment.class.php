@@ -7,7 +7,8 @@
  * @property-read int $sandbox
  * @property-read string $version
  * @property-read string $gate
- *
+ * 
+ * @package wa-plugin/payment
  */
 class assistPayment extends waPayment
 {

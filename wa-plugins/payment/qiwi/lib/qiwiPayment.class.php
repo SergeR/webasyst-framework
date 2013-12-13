@@ -15,6 +15,8 @@
  * @property-read string $prefix
  * @property-read string $customer_phone
  * @property-read string $TESTMODE
+ * 
+ * @package wa-plugin/payment
  *
  */
 class qiwiPayment extends waPayment implements waIPayment, waIPaymentCapture, waIPaymentCancel

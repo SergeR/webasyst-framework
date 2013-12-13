@@ -7,6 +7,7 @@
  * @property-read string $weight_dimension
  * @property-read array $rate
  * @property-read string $delivery_time
+ * @package wa-plugin/shipping
  *
  */
 class courierShipping extends waShipping

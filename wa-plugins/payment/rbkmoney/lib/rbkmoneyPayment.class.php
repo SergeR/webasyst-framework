@@ -5,6 +5,8 @@
  * @property string $shop_id
  * @property string $shop_account
  * @property string $secret_key
+ * 
+ * @package wa-plugin/payment
  */
 class rbkmoneyPayment extends waPayment implements waIPayment
 {
