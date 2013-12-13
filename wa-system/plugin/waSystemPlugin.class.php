@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-system/plugin
+ */
 abstract class waSystemPlugin
 {
 
