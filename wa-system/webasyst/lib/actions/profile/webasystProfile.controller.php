@@ -1,6 +1,8 @@
 <?php
 /**
  * Own profile editor for users who don't have access to Contacts app.
+ * 
+ * @package wa-system/webasyst/profile
  */
 class webasystProfileController extends waViewController
 {

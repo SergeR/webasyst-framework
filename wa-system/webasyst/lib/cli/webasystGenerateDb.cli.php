@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/cli
+ */
 class webasystGenerateDbCli extends waCliController
 {
     /**

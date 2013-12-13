@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/backend
+ */
 class webasystBackendActions extends waViewActions
 {
 

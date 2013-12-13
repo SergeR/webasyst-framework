@@ -1,6 +1,10 @@
 <?php
 
-/** Save contact data that came from profile form. */
+/**
+ * Save contact data that came from profile form.
+ * 
+ * @package wa-system/webasyst/profile
+ */
 class webasystProfileSaveController extends waJsonController
 {
     /** @var waContact */

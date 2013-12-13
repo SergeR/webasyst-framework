@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-system/webasyst/profile
+ */
 
 wa('contacts'); // !!! probably should inherit the other way around?..
 

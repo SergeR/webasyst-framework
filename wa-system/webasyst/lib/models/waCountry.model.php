@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waCountryModel extends waModel
 {
     protected $table = 'wa_country';

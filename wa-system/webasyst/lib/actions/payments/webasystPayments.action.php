@@ -5,6 +5,8 @@
  *
  * Available by URL:
  *     http://ROOT_PATH/payments.php/s:module_id/
+ * 
+ * @package wa-system/webasyst/payment
  */
 class webasystPaymentsAction extends waViewAction
 {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/login
+ */
 class webasystLoginController extends waViewController
 {
     public function execute()

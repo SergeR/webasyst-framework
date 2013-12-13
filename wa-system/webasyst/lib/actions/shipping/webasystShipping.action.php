@@ -5,6 +5,8 @@
  *
  * Available by URL:
  * @link http://ROOT_PATH/shipping/i:module_id/
+ * 
+ * @package wa-system/webasyst/shipment
  */
 class webasystShippingAction extends waViewAction
 {

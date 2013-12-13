@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/backend
+ */
 class webasystBackendDataController extends waController
 {
     public function execute()

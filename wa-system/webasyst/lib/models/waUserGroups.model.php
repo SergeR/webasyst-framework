@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waUserGroupsModel extends waModel
 {
     protected $table = 'wa_user_groups';

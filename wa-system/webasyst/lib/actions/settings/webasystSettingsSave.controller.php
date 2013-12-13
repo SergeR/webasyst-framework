@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/webasyst/settings
+ */
 class webasystSettingsSaveController extends waJsonController
 {
     public function execute()

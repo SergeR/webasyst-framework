@@ -1,6 +1,10 @@
 <?php
 
-/** Change own password */
+/**
+ * Change own password
+ * 
+ * @package wa-system/webasyst/profile
+ */
 class webasystProfilePasswordController extends waJsonController
 {
     public function execute()
