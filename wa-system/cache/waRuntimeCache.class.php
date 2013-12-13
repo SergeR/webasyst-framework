@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Cache
+ */
 class waRuntimeCache implements waiCache
 {
 
