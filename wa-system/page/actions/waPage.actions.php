@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/page/action
+ */
 class waPageActions extends waActions
 {
     protected $model;
