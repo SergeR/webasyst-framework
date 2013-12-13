@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/design
+ */
 class waDesignActions extends waActions
 {
 
