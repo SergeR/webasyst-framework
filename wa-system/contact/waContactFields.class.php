@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -9,8 +9,8 @@
  * @link http://www.webasyst.com/
  * @author Webasyst LLC
  * @copyright 2011 Webasyst LLC
- * @package wa-system
- * @subpackage contact
+ * @package wa-system/Contact
+ * @license http://www.webasyst.com/framework/license/ LGPL
  */
 
 /**
@@ -18,37 +18,51 @@
  */
 class waContactFields
 {
-    /** Fields for 'person' contact type
-      * id => waContactField */
+    /**
+     * @var array Fields for 'person' contact type
+     * id => waContactField
+     */
     protected static $personFields;
 
-    /** Fields for 'company' contact type
-      * id => waContactField */
+    /**
+     * @var array Fields for 'company' contact type
+     * id => waContactField
+     */
     protected static $companyFields;
 
-    /** Fields not used for person contact type (system and custom).
-      * $companyDisabled and $personDisabled share the same object instances. Don't spoil them, clone if needed.
-      * id => waContactField */
+    /**
+     * @var array Fields not used for person contact type (system and custom).
+     * $companyDisabled and $personDisabled share the same object instances. Don't spoil them, clone if needed.
+     * id => waContactField
+     */
     protected static $personDisabled;
 
-    /** Fields not used for company contact type (system and custom).
-      * $companyDisabled and $personDisabled share the same object instances. Don't spoil them, clone if needed.
-      * id => waContactField */
+    /**
+     * @var array Fields not used for company contact type (system and custom).
+     * $companyDisabled and $personDisabled share the same object instances. Don't spoil them, clone if needed.
+     * id => waContactField
+     */
     protected static $companyDisabled;
 
-    /** id => boolean: true for system fields, false for custom ones */
+    /**
+     * @var array id => boolean: true for system fields, false for custom ones
+     */
     protected static $fieldStatus;
 
-    /** Field parameters to store in *_fields_order.php
-      * id => default value to store in *fields.php */
+    /**
+     * @var array Field parameters to store in *_fields_order.php
+     * id => default value to store in *fields.php
+     */
     public static $customParameters = array(
         'allow_self_edit' => false,
         'required' => false,
         'unique' => false,
     );
 
-    /** List of storages, cache for self::getStorage()
-      * id => waContactStorage */
+    /**
+     * @var array List of storages, cache for self::getStorage()
+     * id => waContactStorage
+     */
     protected static $storages;
 
     /**

@@ -1,8 +1,9 @@
 <?php
-
 /**
  * Branch field: radio selector with javascript to hide parts of the form
  * depending on current selection.
+ * 
+ * @package wa-system/Contact
  */
 class waContactBranchField extends waContactSelectField
 {

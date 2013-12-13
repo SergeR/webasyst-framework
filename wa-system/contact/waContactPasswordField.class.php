@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Contact
+ */
 class waContactPasswordField extends waContactField
 {
     public function getHTML($params = array(), $attrs = '')

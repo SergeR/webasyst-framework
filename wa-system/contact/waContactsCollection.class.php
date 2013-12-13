@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Contact
+ */
 class waContactsCollection
 {
     protected $hash;
