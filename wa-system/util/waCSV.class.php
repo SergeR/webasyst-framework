@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/util
+ */
 class waCSV
 {
     const MAX_FIELDS_COUNT = 100;

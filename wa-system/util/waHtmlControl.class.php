@@ -2,7 +2,7 @@
 /**
  *
  * @author WebAsyst Team
- *
+ * @package wa-system/util
  */
 class waHtmlControl
 {
