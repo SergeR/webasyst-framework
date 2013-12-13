@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/view
+ */
 class waPHPView extends waView
 {
     protected $postfix = '.php';
