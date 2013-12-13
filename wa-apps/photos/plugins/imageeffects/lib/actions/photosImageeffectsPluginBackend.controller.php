@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/imageeffects
+ */
 class photosImageeffectsPluginBackendController extends waJsonController
 {
     private $filters = array(

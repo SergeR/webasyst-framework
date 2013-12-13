@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/upload
+ */
 class photosUploadPhotoController extends waJsonController
 {
     /**

@@ -17,6 +17,8 @@
  * @property $height
  * @property $type
  * @property $ext
+ * 
+ * @package wa-apps/photos
  */
 class photosImage
 {

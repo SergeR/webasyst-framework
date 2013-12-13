@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/frontend
+ */
 class photosFrontendErrorAction extends waViewAction
 {
     public function execute()

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/photo
+ */
 class photosPhotoResolutionController extends waJsonController
 {
     // Resolution photo ids: return ids of photo taking in account photo in stack

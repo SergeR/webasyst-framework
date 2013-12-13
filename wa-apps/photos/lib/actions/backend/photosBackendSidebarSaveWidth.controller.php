@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/backend
+ */
 class photosBackendSidebarSaveWidthController extends waJsonController
 {    
     public function execute() {

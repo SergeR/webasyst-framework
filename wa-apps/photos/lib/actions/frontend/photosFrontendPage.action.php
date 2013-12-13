@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/frontend
+ */
 class photosFrontendPageAction extends waPageAction
 {
 

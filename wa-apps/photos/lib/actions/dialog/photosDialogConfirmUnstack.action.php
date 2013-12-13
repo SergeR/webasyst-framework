@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/dialog
+ */
 class photosDialogConfirmUnstackAction extends photosDialogConfirmViewAction
 {
     public function __construct($params=null) {

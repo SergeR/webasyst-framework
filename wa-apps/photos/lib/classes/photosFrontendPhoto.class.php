@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosFrontendPhoto
 {
     public static function getLink($photo, $album = null)

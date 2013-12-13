@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/settings
+ */
 class photosSettingsAction extends waViewAction
 {
     public function execute()

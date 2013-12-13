@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/backend
+ */
 class photosBackendController extends waViewController
 {
     public function execute()

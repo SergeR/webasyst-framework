@@ -2,6 +2,8 @@
 
 /**
  * A list of localized strings to use in JS.
+ * 
+ * @package wa-apps/photos/backend
  */
 class photosBackendLocAction extends waViewAction
 {

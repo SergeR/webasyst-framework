@@ -1,7 +1,7 @@
 <?php
 /**
  * @author WebAsyst Team
- *
+ * @package wa-apps/photos/plugin
  */
 class photosPluginsSortController extends waJsonController
 {

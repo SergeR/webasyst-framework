@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/publicgallery
+ */
 class photosPublicgalleryVoteModel extends waModel
 {
     protected $table = 'photos_publicgallery_vote';

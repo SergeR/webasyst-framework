@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/photo
+ */
 class photosPhotoDeleteFromAlbumController extends waJsonController
 {
     public function execute()

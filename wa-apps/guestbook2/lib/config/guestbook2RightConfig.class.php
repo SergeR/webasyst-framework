@@ -4,6 +4,8 @@
  * Definition of the app's extended access rights which can be assigned to users and user groups in the Contacts app
  * Описание детальных прав приложения, которые можно задать пользователям и группам в приложении Контакты
  * @see http://www.webasyst.com/framework/docs/dev/access-rights/
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2RightConfig extends waRightConfig
 {

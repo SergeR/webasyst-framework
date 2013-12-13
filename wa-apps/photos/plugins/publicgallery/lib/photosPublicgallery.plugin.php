@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/publicgallery
+ */
 class photosPublicgalleryPlugin extends photosPlugin
 {    
     public function saveSettings($settings = array())

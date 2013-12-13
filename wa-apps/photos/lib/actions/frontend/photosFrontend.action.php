@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/frontend
+ */
 class photosFrontendAction extends photosFrontendCollectionViewAction
 {
     public function execute()

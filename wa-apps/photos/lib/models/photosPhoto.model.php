@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosPhotoModel extends waModel
 {
     const SOURCE_BACKEND = 'backend';

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/dialog
+ */
 class photosDialogConfirmDeletePhotoAction extends photosDialogConfirmDeleteAlbumAction
 {
     public function __construct($params=null) {

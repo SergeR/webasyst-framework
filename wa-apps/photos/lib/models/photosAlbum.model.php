@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosAlbumModel extends waModel
 {
     protected $table = 'photos_album';

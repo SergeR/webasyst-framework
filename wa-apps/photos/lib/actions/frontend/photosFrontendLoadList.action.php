@@ -3,6 +3,8 @@
 /**
  * Lazy loading photostream in one-photo page
  * @see photosFrontendPhotoAction
+ * 
+ * @package wa-apps/photos/frontend
  */
 class photosFrontendLoadListAction extends waViewAction
 {

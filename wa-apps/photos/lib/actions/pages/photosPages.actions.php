@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/page
+ */
 class photosPagesActions extends waPageActions
 {
 

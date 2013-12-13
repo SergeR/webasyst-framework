@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/frontend
+ */
 class photosFrontendAlbumAction extends photosFrontendCollectionViewAction
 {
     public $photo_url;

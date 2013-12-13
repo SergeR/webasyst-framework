@@ -4,6 +4,8 @@
  * Signup action /signup
  * Экшен регистрации /signup
  * @see https://www.webasyst.com/framework/docs/dev/auth-frontend/
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2SignupAction extends waSignupAction
 {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/watermark
+ */
 class photosWatermarkPlugin extends photosPlugin
 {
     public function photoUpload(waImage $photo)

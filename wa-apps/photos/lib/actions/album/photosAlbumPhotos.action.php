@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/album
+ */
 class photosAlbumPhotosAction extends waViewAction
 {
     public function execute()

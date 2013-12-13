@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin
+ */
 class photosPluginsSaveController extends waJsonController
 {
     public function execute()

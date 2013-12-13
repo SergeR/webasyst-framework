@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/comment
+ */
 class photosCommentAddController extends waJsonController
 {
     /**

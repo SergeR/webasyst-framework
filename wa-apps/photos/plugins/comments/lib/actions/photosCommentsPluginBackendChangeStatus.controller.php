@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/comment
+ */
 class photosCommentsPluginBackendChangeStatusController extends waJsonController
 {
     public function execute()

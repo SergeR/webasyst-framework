@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosSitemapConfig extends waSitemapConfig
 {
     public function execute()

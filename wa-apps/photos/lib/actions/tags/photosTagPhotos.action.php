@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/tag
+ */
 class photosTagPhotosAction extends waViewAction
 {
     public function execute()

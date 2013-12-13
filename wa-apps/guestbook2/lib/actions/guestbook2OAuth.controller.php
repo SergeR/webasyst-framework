@@ -4,6 +4,8 @@
  * Controller for processing registrations/authorizations via social networks
  * Контроллер обработки регистраций/входов через социальные сети
  * @see https://www.webasyst.com/framework/docs/dev/auth-adapters/
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2OAuthController extends waOAuthController
 {
