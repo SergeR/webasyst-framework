@@ -3,7 +3,7 @@
 /**
  *
  * @link http://www.webasyst.com/developers/docs/features/localization/
- *
+ * @package wa-system/locale
  */
 
 require_once dirname(__FILE__).'/waGettext.class.php';
