@@ -1,8 +1,19 @@
 <?php
 
-/** Ad hoc logging to /wa-log/$file */
+/**
+ *  Ad hoc logging to /wa-log/$file
+ * @package wa-system/log
+ */
 class waLog
 {
+    /**
+     * Writes a message to log
+     * 
+     * @param string $message message text
+     * @param string $file logfile name
+     * @return boolean
+     * @throws waException
+     */
     public static function log($message, $file = 'error.log') {
         try {
             $wa = wa();
