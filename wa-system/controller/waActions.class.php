@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 abstract class waActions extends waController
 {
     protected $action;

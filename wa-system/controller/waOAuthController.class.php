@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 class waOAuthController extends waViewController
 {
     public function execute()

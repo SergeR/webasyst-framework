@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 class waMyNavAction extends waViewAction
 {
     public function execute()

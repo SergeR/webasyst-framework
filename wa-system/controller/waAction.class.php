@@ -8,8 +8,7 @@
  * @link http://www.webasyst.com/
  * @author Webasyst LLC
  * @copyright 2011 Webasyst LLC
- * @package wa-system
- * @subpackage controller
+ * @package wa-system/controller
  */
 abstract class waAction extends waController
 {
