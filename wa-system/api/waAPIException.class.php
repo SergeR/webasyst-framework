@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/API
+ */
 class waAPIException extends Exception
 {
     protected $status_code;

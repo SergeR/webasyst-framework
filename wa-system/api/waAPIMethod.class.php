@@ -1,8 +1,13 @@
 <?php
-
+/**
+ * @package wa-system/API
+ */
 class waAPIMethod
 {
 
+    /**
+     * @var string 
+     */
     protected $method = 'GET';
     protected $response;
 
@@ -16,7 +21,9 @@ class waAPIMethod
 
     }
 
-
+    /**
+     * @throws waAPIException
+     */
     public function getResponse($internal = false)
     {
         if (!$internal) {
@@ -32,6 +39,9 @@ class waAPIMethod
         return $this->response;
     }
 
+    /**
+     * @throws waAPIException
+     */
     public function get($name, $required = false)
     {
         $v = waRequest::get($name);
@@ -41,6 +51,9 @@ class waAPIMethod
         return $v;
     }
 
+    /**
+     * @throws waAPIException
+     */
     public function post($name, $required = false)
     {
         $v = waRequest::post($name);

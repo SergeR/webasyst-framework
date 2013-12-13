@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-system/API
+ */
 
 class waAPIDecoratorJSON extends waAPIDecorator
 {
@@ -20,6 +23,8 @@ class waAPIDecoratorJSON extends waAPIDecorator
      * вида array('uid' => array(111,222)) заменяем его на
      * array(111,222), т.к. array('uid' => ...) это
      * обертка для структурирования хмл.
+     * @param array $arr
+     * @return array
      */
     protected function parseArray($arr)
     {

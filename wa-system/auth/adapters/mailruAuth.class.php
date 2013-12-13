@@ -1,10 +1,7 @@
 <?php
-
 /**
- * @see: Mail.ru Documentation
- *
- * http://api.mail.ru/docs/guides/oauth/sites/
- *
+ * @package wa-system/Auth/Adapters
+ * @see http://api.mail.ru/docs/guides/oauth/sites/ Mail.ru Documentation
  */
 
 class mailruAuth extends waOAuth2Adapter

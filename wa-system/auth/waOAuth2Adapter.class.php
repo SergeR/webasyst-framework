@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Auth
+ */
 abstract class waOAuth2Adapter extends waAuthAdapter
 {
     protected $app_id;

@@ -1,13 +1,18 @@
 <?php
-
+/**
+ * @package wa-system/API
+ */
 class waAPIController 
 {
 
     /**
-     * Format of the response - xml or json, by default JSON
+     * @var string Format of the response - xml or json, by default JSON
      */
     protected $format = 'JSON';
     
+    /**
+     * @var array 
+     */
     protected $known_formats = array('XML', 'JSON');
 
 
