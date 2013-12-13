@@ -4,6 +4,10 @@ Webasyst is an open source PHP Framework for developing web apps with backend an
 Distributed under the terms of LGPL license.
 http://www.webasyst.com/
 
+Этот форк содержит изменения по сравнению с оригинальным. Изменения не всегда принятые сообществом 
+
+В ветке docblocks веду работы по комментированию кода
+
 ## System Requirements ##
 
 	* Web Server
