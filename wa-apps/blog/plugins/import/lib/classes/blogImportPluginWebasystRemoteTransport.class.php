@@ -1,6 +1,8 @@
 <?php
 
-
+/**
+ * @package wa-apps/blog/plugin/import
+ */
 class blogImportPluginWebasystRemoteTransport extends blogImportPluginWebasystTransport
 {
     const TIMEOUT_SOCKET = 10;

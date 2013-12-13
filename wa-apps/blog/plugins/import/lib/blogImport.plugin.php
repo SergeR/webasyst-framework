@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/import
+ */
 class blogImportPlugin extends blogPlugin
 {
     private static function verifyRegexp(&$pattern, $delimiter = '/')

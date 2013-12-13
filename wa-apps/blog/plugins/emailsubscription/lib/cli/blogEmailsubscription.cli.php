@@ -2,6 +2,7 @@
 
 /**
  * Cron job to publish scheduled posts
+ * @package wa-apps/blog/plugin/emailsubscription
  */
 class blogEmailsubscriptionCli extends waCliController
 {

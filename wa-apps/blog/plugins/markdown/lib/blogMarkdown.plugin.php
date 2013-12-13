@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/markdown
+ */
 class blogMarkdownPlugin extends blogPlugin
 {
     public function backendPostEdit($post) {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/aksimet
+ */
 class blogAkismetPlugin extends blogPlugin
 {
     public function commentValidate($comment)

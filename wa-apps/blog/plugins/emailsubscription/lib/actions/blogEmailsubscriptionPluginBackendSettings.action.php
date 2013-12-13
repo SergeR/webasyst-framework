@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/emailsubscription
+ */
 class blogEmailsubscriptionPluginBackendSettingsAction extends waViewAction
 {
     public function execute()

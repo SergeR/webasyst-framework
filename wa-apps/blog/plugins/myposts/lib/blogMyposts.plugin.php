@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/myposts
+ */
 class blogMypostsPlugin extends blogPlugin
 {
     public function backendSidebar($params)

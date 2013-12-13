@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/emailsubscription
+ */
 class blogEmailsubscriptionModel extends waModel
 {
     protected $table = "blog_emailsubscription";

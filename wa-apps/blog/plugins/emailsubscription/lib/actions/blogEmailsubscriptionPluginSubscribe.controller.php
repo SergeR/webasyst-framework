@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/emailsubscription
+ */
 class blogEmailsubscriptionPluginSubscribeController extends waJsonController
 {
     public function execute()

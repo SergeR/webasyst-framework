@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/tag
+ */
 class blogTagPluginBackendListController extends waController
 {
     public function execute()

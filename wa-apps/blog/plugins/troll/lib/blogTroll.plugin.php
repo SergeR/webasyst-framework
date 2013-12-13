@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/troll
+ */
 class blogTrollPlugin extends blogPlugin
 {
     public function prepareView(&$comments)

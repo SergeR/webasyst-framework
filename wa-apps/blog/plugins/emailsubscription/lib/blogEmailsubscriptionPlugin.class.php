@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/emailsubscription
+ */
 class blogEmailsubscriptionPlugin extends blogPlugin
 {
     public function postPublishAction($params)

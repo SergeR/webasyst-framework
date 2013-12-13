@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/aksimet
+ */
 class blogAkismetPluginBackendController extends waJsonController
 {
     public function execute()
