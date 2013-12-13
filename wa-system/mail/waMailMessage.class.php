@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/mail
+ */
 require_once realpath(dirname(__FILE__).'/../').'/vendors/swift/swift_required.php';
 
 class waMailMessage extends Swift_Message
