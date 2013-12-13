@@ -1,6 +1,10 @@
 <?php
 
-/** Save data from categories editor form */
+/**
+ * Save data from categories editor form
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesSaveController extends waJsonController
 {
     public function execute() {

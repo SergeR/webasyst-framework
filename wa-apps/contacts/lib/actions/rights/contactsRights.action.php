@@ -1,6 +1,10 @@
 <?php
 
-/** HTML form to manage user's or group's access rights for a single application. */
+/**
+ * HTML form to manage user's or group's access rights for a single application.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsRightsAction extends waViewAction
 {
     public function execute()

@@ -1,5 +1,9 @@
 <?php
-/** A list of localized strings to use in JS. */
+/**
+ * A list of localized strings to use in JS.
+ * 
+ * @package wa-apps/contacts/backend
+ */
 class contactsBackendLocAction extends waViewAction
 {
     public function execute()

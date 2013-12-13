@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/contacts
+ */
 class contactsDefaultLayout extends waLayout
 {
     public function execute()

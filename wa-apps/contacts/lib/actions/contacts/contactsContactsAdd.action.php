@@ -1,5 +1,9 @@
 <?php
-/** Create new contact form. */
+/**
+ * Create new contact form.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsAddAction extends waViewAction
 {
     public function execute()

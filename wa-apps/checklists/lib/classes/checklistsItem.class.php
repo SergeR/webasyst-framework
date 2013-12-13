@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/checklists
+ */
 class checklistsItem
 {
     public static function prepareItems($items)

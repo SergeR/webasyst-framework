@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/contacts
+ */
 class contactsHistoryModel extends waModel
 {
     protected $table = 'contacts_history';

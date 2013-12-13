@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/contacts/backend
+ */
 class contactsBackendSidebarAction extends waViewAction
 {
     public function execute()

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/checklists
+ */
 class checklistsListModel extends waModel
 {
     protected $table = 'checklists_list';

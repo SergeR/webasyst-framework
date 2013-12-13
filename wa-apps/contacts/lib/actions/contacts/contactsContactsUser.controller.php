@@ -1,6 +1,10 @@
 <?php
 
-/** Create a new user from existing contact. */
+/**
+ * Create a new user from existing contact.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsUserController extends waJsonController
 {
     public function execute()

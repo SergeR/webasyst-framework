@@ -2,6 +2,8 @@
 
 /**
  * Interface to Contacts application to set up user access rights.
+ * 
+ * @package wa-apps/checklists
  */
 class checklistsRightConfig extends waRightConfig
 {

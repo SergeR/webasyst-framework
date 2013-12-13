@@ -2,6 +2,8 @@
 
 /**
  * Collection of backend actions that output JSON data
+ * 
+ * @package wa-apps/checklists/json
  */
 class checklistsJsonActions extends waJsonActions
 {

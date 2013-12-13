@@ -1,6 +1,10 @@
 <?php
 
-/** Save a set of groups a contact belongs to. */
+/**
+ * Save a set of groups a contact belongs to.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsContactSaveController extends waJsonController
 {
     public function execute()

@@ -1,6 +1,10 @@
 <?php
 
-/** save contact data that came from contact add or contact edit form. */
+/**
+ * save contact data that came from contact add or contact edit form.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsSaveController extends waJsonController
 {
     /**

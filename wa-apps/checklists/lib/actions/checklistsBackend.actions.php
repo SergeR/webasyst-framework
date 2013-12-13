@@ -2,6 +2,8 @@
 
 /**
  * Collection of backend actions that show HTML pages
+ * 
+ * @package wa-apps/checklists/backend
  */
 class checklistsBackendActions extends waViewActions
 {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/contacts
+ */
 class contactsRightConfig extends waRightConfig
 {
     /** 

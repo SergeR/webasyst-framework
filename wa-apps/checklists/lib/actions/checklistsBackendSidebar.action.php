@@ -2,6 +2,8 @@
 
 /**
  * Application sidebar. Used as a part of the default layout.
+ * 
+ * @package wa-apps/checklists/backend
  */
 class checklistsBackendSidebarAction extends waViewAction
 {

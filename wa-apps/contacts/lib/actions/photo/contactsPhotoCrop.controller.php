@@ -1,6 +1,10 @@
 <?php
 
-/** Contact photo editor, step two: user selected an area to crop. */
+/**
+ * Contact photo editor, step two: user selected an area to crop.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsPhotoCropController extends waJsonController
 {
     public function execute()

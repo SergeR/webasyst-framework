@@ -1,6 +1,10 @@
 <?php
 
-/** Show links to other applications in a dialog, usually before contact deletion. */
+/**
+ * Show links to other applications in a dialog, usually before contact deletion.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsLinksAction extends waViewAction
 {
     public function execute() {
