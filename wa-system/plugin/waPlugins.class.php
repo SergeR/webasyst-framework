@@ -1,6 +1,6 @@
 <?php 
 /**
- * @package wa-system/plugins
+ * @package wa-system/plugin
  */
 class waPlugins
 {
