@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/domains
+ */
 class siteDomainsSaveController extends waJsonController
 {
     public function execute()

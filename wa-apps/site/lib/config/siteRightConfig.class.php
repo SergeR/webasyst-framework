@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/config
+ */
 class siteRightConfig extends waRightConfig
 {
     public function init()

@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/layout
+ */
 class siteDefaultLayout extends waLayout
 {
     protected $domain_id;

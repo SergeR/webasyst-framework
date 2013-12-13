@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/files
+ */
 class siteFilesAction extends waViewAction
 {
     public function execute()

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/routing
+ */
 class siteRoutingSaveController extends waJsonController
 {
     public function execute()

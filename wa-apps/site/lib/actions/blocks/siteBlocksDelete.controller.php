@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/blocks
+ */
 class siteBlocksDeleteController extends waJsonController
 {
     public function execute()

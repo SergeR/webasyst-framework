@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/blocks
+ */
 class siteBlocksAction extends waViewAction
 {
     public function execute()

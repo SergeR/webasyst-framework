@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/blocks
+ */
 class siteBlocksSaveController extends waJsonController
 {
     public function execute()

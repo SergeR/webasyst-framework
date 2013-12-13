@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/files
+ */
 class siteFilesUploadimageController extends siteFilesUploadController
 {
     protected $name;

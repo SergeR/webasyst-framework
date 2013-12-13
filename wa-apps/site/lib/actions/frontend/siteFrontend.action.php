@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/frontend
+ */
 class siteFrontendAction extends waViewAction
 {   
     public function execute()

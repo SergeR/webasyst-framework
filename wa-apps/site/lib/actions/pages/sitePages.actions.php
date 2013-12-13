@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/pages
+ */
 class sitePagesActions extends waPageActions
 {
 

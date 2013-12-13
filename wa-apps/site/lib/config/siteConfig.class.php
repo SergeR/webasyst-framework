@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/config
+ */
 class siteConfig extends waAppConfig
 {
     protected $_routes = null;

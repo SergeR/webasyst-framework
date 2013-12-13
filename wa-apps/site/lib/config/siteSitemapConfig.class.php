@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/config
+ */
 class siteSitemapConfig extends waSitemapConfig
 {
     public function execute()

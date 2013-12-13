@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site
+ */
 class siteBlockModel extends waModel
 {
     protected $table = 'site_block';

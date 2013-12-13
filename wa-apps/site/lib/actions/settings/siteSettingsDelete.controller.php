@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/setting
+ */
 class siteSettingsDeleteController extends waJsonController
 {
     public function execute()
