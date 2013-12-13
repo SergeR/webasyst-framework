@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/Captcha/ReCaptcha
+ */
 include dirname(__FILE__).'/recaptchalib.php';
 
 class waReCaptcha extends waAbstractCaptcha
