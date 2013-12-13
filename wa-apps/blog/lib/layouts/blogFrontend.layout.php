@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/layout
+ */
 class blogFrontendLayout extends waLayout
 {
     public function execute()

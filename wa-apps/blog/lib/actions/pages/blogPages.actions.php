@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/page
+ */
 class blogPagesActions extends waPageActions
 {
     protected $ibutton = false;

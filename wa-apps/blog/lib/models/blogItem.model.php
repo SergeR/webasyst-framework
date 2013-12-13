@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/model
+ */
 abstract class blogItemModel extends waModel
 {
     protected $where_conditions;

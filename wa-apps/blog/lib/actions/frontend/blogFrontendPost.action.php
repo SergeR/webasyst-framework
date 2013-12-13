@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/frontend
+ */
 class blogFrontendPostAction extends blogViewAction
 {
     protected function isFrontend()

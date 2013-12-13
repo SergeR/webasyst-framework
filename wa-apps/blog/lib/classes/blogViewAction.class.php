@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog
+ */
 class blogViewAction extends waViewAction
 {
 	public function display($clear_assign = true)

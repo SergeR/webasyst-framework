@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/frontend
+ */
 class blogFrontendCommentController extends waJsonController
 {
     /**

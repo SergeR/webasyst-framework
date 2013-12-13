@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/layout
+ */
 class blogDefaultLayout extends waLayout
 {
     protected $js = array();

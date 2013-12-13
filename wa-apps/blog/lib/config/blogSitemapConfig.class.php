@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog
+ */
 class blogSitemapConfig extends waSitemapConfig
 {
     public function execute()

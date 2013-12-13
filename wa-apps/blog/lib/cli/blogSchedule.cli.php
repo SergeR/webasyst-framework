@@ -2,6 +2,8 @@
 
 /**
  * Cron job to publish scheduled posts
+ * 
+ * @package wa-apps/blog/cli
  */
 class blogScheduleCli extends waCliController
 {

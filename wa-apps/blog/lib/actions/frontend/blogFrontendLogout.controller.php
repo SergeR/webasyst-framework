@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/frontend
+ */
 class blogFrontendlogoutController extends waController
 {
 	public function execute()

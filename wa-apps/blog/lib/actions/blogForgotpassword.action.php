@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions
+ */
 class blogForgotpasswordAction extends waForgotPasswordAction
 {
     public function execute()

@@ -2,6 +2,8 @@
 
 /**
  * Cron job to send reminders to authors about overdue or close to deadline posts
+ * 
+ * @package wa-apps/blog/cli
  */
 class blogReminderCli extends waCliController
 {

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/actions/comment
+ */
 class blogCommentsEditController extends waJsonController
 {
     public function execute()

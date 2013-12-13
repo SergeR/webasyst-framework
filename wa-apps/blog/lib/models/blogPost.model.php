@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/model
+ */
 class blogPostModel extends blogItemModel
 {
     const STATUS_DRAFT = 'draft';

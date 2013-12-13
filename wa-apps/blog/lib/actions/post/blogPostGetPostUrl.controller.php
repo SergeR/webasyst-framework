@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/post
+ */
 class blogPostGetPostUrlController extends waJsonController
 {
     public function execute()

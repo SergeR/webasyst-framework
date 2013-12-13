@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog
+ */
 class blogBlog
 {
     static function getUrl($blog = null, $absolute = false)

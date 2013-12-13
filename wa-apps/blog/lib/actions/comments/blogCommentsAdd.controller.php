@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/comment
+ */
 class blogCommentsAddController extends waJsonController
 {
     private $post_id;

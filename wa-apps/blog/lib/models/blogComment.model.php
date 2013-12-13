@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/model
+ */
 class blogCommentModel extends waNestedSetModel
 {
     const STATUS_DELETED = 'deleted';

@@ -1,7 +1,7 @@
 <?php
 /**
  * @author WebAsyst Team
- *
+ * @package wa-apps/blog/actions/comment
  */
 class blogCommentsAction extends waViewAction
 {

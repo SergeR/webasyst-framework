@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions
+ */
 class blogSignupAction extends waSignupAction
 {
     public function execute()

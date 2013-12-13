@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/post
+ */
 class blogPostImageController extends waJsonController
 {
     protected $name;
