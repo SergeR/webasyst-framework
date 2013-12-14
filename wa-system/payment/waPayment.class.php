@@ -840,11 +840,17 @@ abstract class waPayment extends waSystemPlugin
 
 }
 
+/**
+ * @package wa-system/payment
+ */
 interface waIPayment
 {
 
 }
 
+/**
+ * @package wa-system/payment
+ */
 interface waIPaymentCancel
 {
     /**
@@ -858,6 +864,9 @@ interface waIPaymentCancel
     public function cancel($transaction_raw_data);
 }
 
+/**
+ * @package wa-system/payment
+ */
 interface waIPaymentCapture
 {
     /**
@@ -871,6 +880,9 @@ interface waIPaymentCapture
     public function capture($transaction_raw_data);
 }
 
+/**
+ * @package wa-system/payment
+ */
 interface waIPaymentRefund
 {
     /**
