@@ -1,8 +1,6 @@
 <?php
 /**
  * @version draft
- * @package waPlugins
- * @subpackage Payment
  * @name QIWI
  * @description QIWI payment module
  * @type ???????
