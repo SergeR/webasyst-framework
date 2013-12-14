@@ -8,6 +8,7 @@
  * Используется на всех страницах фронтенда
  *
  * @see http://www.webasyst.com/framework/docs/dev/layouts/
+ * @package wa-apps/guestbook2
  */
 class guestbook2FrontendLayout extends waLayout
 {
