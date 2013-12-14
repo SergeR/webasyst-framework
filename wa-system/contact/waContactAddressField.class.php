@@ -50,7 +50,11 @@ class waContactAddressField extends waContactCompositeField
     }
 }
 
-/** Format address on one line. */
+/**
+ * Format address on one line.
+ * 
+ * @package wa-system/Contact
+ */
 class waContactAddressOneLineFormatter extends waContactFieldFormatter
 {
     public function format($data, $format=null) {
@@ -128,8 +132,12 @@ class waContactAddressOneLineFormatter extends waContactFieldFormatter
     }
 }
 
-/** Format address so each subfield takes its own line.
-  * Currently not used. */
+/**
+ * Format address so each subfield takes its own line.
+  * Currently not used.
+ * 
+ * @package wa-system/Contact
+ */
 class waContactAddressSeveralLinesFormatter extends waContactAddressOneLineFormatter
 {
     public function format($data) {

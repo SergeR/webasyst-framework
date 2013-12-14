@@ -1113,6 +1113,7 @@ class waSystem
  * @param string $name
  * @param bool $set_current
  * @return waSystem
+ * @package wa-system
  */
 function wa($name = null, $set_current = false)
 {
