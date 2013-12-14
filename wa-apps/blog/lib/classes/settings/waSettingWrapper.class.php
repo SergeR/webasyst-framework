@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog
+ */
 abstract class waSettingWrapper
 {
     /**
