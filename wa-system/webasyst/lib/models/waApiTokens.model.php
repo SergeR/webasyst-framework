@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waApiTokensModel extends waModel
 {
     protected $id = 'token';

@@ -4,6 +4,8 @@
  *
  * @property-read string $merchant
  * @property-read string $pass
+ * 
+ * @package wa-plugin/payment
  */
 class private24Payment extends waPayment implements waIPayment
 {

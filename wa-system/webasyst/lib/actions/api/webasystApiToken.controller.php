@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/api
+ */
 class webasystApiTokenController extends waController
 {
 

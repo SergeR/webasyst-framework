@@ -3,6 +3,7 @@
 /**
  * @deprecated
  * @see blogScheduleCli
+ * @package wa-apps/blog/actions/cron
  */
 
 class blogCronScheduleCli extends waCliController

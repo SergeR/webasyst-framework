@@ -1,10 +1,8 @@
 <?php
-
 /**
- * @see: Yandex Documentation
- *
- * http://api.yandex.ru/oauth/doc/dg/concepts/About.xml
- * http://api.yandex.ru/login/doc/dg/concepts/about.xml
+ * @package wa-system/Auth/Adapters
+ * @see http://api.yandex.ru/oauth/doc/dg/concepts/About.xml Yandex Documentation
+ * @see http://api.yandex.ru/login/doc/dg/concepts/about.xml
  */
 
 class yandexAuth extends waOAuth2Adapter

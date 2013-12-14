@@ -8,6 +8,7 @@
  * @property-read string $shopPassword
  * @property-read string $ShopID
  * @property-read string $scid
+ * @package wa-plugin/payment
  */
 class yandexmoneyPayment extends waPayment implements waIPayment
 {

@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -9,7 +9,7 @@
  * @link http://www.webasyst.com/
  * @author Webasyst LLC
  * @copyright 2011 Webasyst LLC
- * @package wa-system
+ * @package wa-system/layout
  */
 class waLayout extends waController
 {

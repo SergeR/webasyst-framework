@@ -6,7 +6,7 @@
  * @property-read string $currency
  * @property-read string $delivery
  * @property-read string $prompt_address
- *
+ * @package wa-plugin/shipping
  */
 class flatrateShipping extends waShipping
 {

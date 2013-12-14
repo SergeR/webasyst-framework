@@ -9,6 +9,8 @@
  * @property-read string $customer_lang
  * @version 1.6
  * @link http://www.payonlinesystem.ru/
+ * 
+ * @package wa-plugin/payment
  */
 class payonlinePayment extends waPayment implements waIPayment, waIPaymentRefund
 {

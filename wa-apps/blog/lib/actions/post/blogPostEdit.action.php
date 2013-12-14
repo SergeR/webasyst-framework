@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/post
+ */
 class blogPostEditAction extends waViewAction
 {
 

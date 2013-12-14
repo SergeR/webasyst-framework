@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/api/v1
+ */
 class photosPhotoRemoveTagsMethod extends waAPIMethod
 {
     protected $method = 'POST';

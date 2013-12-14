@@ -2,6 +2,8 @@
 
 /**
  * Implements autocomplete for contact search fields in other apps.
+ * 
+ * @package wa-apps/contacts/backend
  */
 class contactsBackendAutocompleteController extends waJsonController
 {

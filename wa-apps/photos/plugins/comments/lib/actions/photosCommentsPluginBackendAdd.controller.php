@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/comment
+ */
 class photosCommentsPluginBackendAddController extends photosCommentAddController
 {
     public function execute() {

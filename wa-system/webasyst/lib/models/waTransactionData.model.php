@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waTransactionDataModel extends waModel
 {
     protected $table = 'wa_transaction_data';

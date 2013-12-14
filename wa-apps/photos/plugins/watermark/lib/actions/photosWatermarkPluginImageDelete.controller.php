@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/watermark
+ */
 class photosWatermarkPluginImageDeleteController extends waJsonController
 {
     public function execute()

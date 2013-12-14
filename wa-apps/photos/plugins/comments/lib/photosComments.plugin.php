@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/comment
+ */
 class photosCommentsPlugin extends photosPlugin
 {
     public function backendPhoto($photo_id)

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/album
+ */
 class photosAlbumSaveFieldController extends waJsonController
 {
     private $availableFields = array(

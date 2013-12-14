@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions
+ */
 class blogLoginAction extends waLoginAction
 {
 

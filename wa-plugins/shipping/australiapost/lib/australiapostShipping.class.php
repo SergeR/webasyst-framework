@@ -8,6 +8,7 @@
  * @property string $length
  * @property string $height
  * @property string $width
+ * @package wa-plugin/shipping
  */
 class australiapostShipping extends waShipping
 {

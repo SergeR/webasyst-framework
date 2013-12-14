@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/category
+ */
 class blogCategory
 {
     static $categories = null;

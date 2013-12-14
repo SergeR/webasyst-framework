@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/checklists
+ */
 class checklistsDefaultLayout extends waLayout
 {
     public function setTitle($title)

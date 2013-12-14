@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosContactsDeleteHandler extends waEventHandler
 {
     

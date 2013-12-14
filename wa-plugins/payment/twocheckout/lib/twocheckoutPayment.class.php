@@ -4,6 +4,7 @@
  * @property-read string $sid
  * @property-read string $secret
  * @property-read boolean $demo
+ * @package wa-plugin/payment
  */
 class twocheckoutPayment extends waPayment implements waIPayment
 {

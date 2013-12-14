@@ -9,6 +9,8 @@
   * - New and partially changed data is stored in $this->rec_data.
   *   - Sub-arrays are waArrayObjectDiff, when corresponding persistent value is an array.
   *     Otherwise they are waArrayObject.
+ * 
+ * @package wa-system/util
   */
 class waArrayObjectDiff extends waArrayObject
 {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/sms
+ */
 class waSMS
 {
     protected static $config;

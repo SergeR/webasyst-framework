@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/import
+ */
 abstract class blogImportPluginXmlrpcTransport extends blogImportPluginTransport
 {
     protected $xmlrpc_url = false;

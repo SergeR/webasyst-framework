@@ -1,6 +1,10 @@
 <?php
 
-/** All access rights save operations (for contacts and groups) go here. */
+/**
+ * All access rights save operations (for contacts and groups) go here.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsRightsSaveController extends waJsonController
 {
     public function execute()

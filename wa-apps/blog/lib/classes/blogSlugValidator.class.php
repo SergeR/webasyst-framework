@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog
+ */
 class blogSlugValidator extends waStringValidator
 {
     const SUBJECT_BLOG = 'blog';

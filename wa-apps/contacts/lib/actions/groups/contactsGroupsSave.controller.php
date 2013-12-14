@@ -1,6 +1,10 @@
 <?php
 
-/** Save data from groups editor form (members and group name) */
+/**
+ * Save data from groups editor form (members and group name)
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsSaveController extends waJsonController
 {
     public function execute() {

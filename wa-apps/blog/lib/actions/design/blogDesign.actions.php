@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/design
+ */
 class blogDesignActions extends waDesignActions
 {
     public function __construct()

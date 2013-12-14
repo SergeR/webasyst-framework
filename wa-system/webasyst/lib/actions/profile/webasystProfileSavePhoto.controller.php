@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/profile
+ */
 wa('contacts');
 
 /** Contact photo editor, step two: user selected an area to crop. */

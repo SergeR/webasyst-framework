@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 class waSignupAction extends waViewAction
 {
     public function execute()

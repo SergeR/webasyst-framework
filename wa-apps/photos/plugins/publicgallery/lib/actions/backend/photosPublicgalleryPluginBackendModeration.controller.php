@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/publicgallery
+ */
 class photosPublicgalleryPluginBackendModerationController extends waJsonController
 {    
     public function execute()

@@ -6,6 +6,8 @@
  * It keeps (int) access values associated with (string) app_id, (int) contact_id, (string) name.
  *
  * To get values for groups, pass a negative group_id instead of contact_id.
+ * 
+ * @package wa-system/webasyst/model
  */
 class waContactRightsModel extends waModel {
 

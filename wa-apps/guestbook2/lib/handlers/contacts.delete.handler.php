@@ -6,6 +6,8 @@
  *
  * Этот хендлер срабатывает при удалении контакта(ов)
  * При удалении контакта contact_id меняется на 0, а имя проставляется именем контакта
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2ContactsDeleteHandler extends waEventHandler
 {

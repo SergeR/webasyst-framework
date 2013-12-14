@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 abstract class waLoginAction extends waViewAction
 {
     public function execute()

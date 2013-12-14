@@ -1,6 +1,10 @@
 <?php
 
-/** Group access rights editor. */
+/**
+ * Group access rights editor.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsRightsAction extends waViewAction
 {
     public function execute()

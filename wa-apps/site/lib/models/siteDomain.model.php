@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site
+ */
 class siteDomainModel extends waModel
 {
     protected $table = 'site_domain';

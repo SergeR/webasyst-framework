@@ -5,6 +5,7 @@
  * @property string $secret_key Secret key
  * @property string $paysystem_alias Payment method
  * @property string $currency transaction currency
+ * @package wa-plugin/payment
  */
 class interkassaPayment extends waPayment
 {

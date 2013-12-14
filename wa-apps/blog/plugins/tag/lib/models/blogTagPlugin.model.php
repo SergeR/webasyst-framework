@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/plugin/tag
+ */
 class blogTagPluginModel extends waModel
 {
     protected $table = 'blog_tag';

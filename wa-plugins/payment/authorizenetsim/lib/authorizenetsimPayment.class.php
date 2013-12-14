@@ -3,6 +3,7 @@
  * @property-read string $login
  * @property-read string $key
  * @property-read boolean $testmode
+ * @package wa-plugin/payment
  */
 class authorizenetsimPayment extends waPayment
 {

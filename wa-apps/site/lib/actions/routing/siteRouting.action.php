@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/routing
+ */
 class siteRoutingAction extends waViewAction
 {
     public function execute()

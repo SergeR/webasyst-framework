@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/controller
+ */
 class waUploadJsonController extends waJsonController
 {   
     protected $path;

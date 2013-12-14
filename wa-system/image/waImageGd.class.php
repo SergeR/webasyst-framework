@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -415,6 +415,9 @@ class waImageGd extends waImage
 
 }
 
+/**
+ * @package wa-system/image
+ */
 function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct)
 {
     // creating a cut resource
@@ -434,6 +437,9 @@ function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, 
     imagedestroy($cut);
 }
 
+/**
+ * @package wa-system/image
+ */
 function imagestring_rotate($dst_im, $font, $angle, $dst_x, $dst_y, $text, $r, $g, $b, $alpha)
 {
     $width = imagefontwidth($font) * strlen($text);

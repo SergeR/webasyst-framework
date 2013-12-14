@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/page/model
+ */
 class waPageModel extends waModel
 {
     protected $app_id;

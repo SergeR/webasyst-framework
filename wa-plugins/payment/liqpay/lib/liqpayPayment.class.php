@@ -10,6 +10,7 @@
  * @property string $order_prefix Invoice number prefix
  * @property boolean $bugfix Добавлять случайное число к номеру счета
  * @property string $customer_phone Customer telephone number
+ * @package wa-plugin/payment
  */
 class liqpayPayment extends waPayment
 {

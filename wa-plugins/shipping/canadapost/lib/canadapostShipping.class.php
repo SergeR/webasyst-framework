@@ -6,6 +6,7 @@
  * @property string $test_key_number
  * @property string $key_number
  * @property string $zip
+ * @package wa-plugin/shipping
  */
 class canadapostShipping extends waShipping
 {

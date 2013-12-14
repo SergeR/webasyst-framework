@@ -18,6 +18,8 @@
  * Доступен в бэкенде по урлу dummy/?action=record&id=[ID]
  * Подробнее о маршрутизации в бэкенде:
  * http://www.webasyst.com/ru/framework/docs/dev/backend-routing/
+ * 
+ * @package wa-apps/dummy
  */
 class dummyBackendRecordController extends waJsonController
 {

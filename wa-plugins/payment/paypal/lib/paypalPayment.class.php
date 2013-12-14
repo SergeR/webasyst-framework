@@ -8,6 +8,8 @@
  *
  * @property-read string $email
  * @property-read string $sandbox
+ * 
+ * @package wa-plugin/payment
  */
 class paypalPayment extends waPayment implements waIPayment, waIPaymentCapture, waIPaymentRefund, waIPaymentCancel
 {

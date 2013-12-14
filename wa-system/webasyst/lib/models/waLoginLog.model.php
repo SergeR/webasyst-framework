@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waLoginLogModel extends waModel
 {
     protected $table = 'wa_login_log';

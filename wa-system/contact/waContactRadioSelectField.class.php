@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Contact
+ */
 class waContactRadioSelectField extends waContactSelectField
 {
     public function getHTML($params = array(), $attrs = '')

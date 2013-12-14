@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/import
+ */
 class blogImportPluginBackendSettingsAction extends blogPluginsSettingsViewAction
 {
     public function execute()

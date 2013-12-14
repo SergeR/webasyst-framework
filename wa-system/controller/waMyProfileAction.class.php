@@ -3,6 +3,8 @@
  * Profile editor form for various "my account" sections with front-end auth.
  * To use it, an application must extend this class it and provide a template,
  * similar to waLoginAction.
+ * 
+ * @package wa-system/controller
  */
 abstract class waMyProfileAction extends waViewAction
 {

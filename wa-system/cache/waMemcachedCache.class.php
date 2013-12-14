@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/Cache
+ */
 class waMemcachedCache implements waiCache
 {
     /**
@@ -24,6 +26,9 @@ class waMemcachedCache implements waiCache
      */
     protected static $memcached;
     
+    /**
+     * @throws waException
+     */
     public function __construct($key, $ttl = 0, $app_id = null)
     {
         if (!$app_id) {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/page/model
+ */
 class waPageParamsModel extends waModel
 {
     public function getById($id)

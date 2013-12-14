@@ -4,6 +4,8 @@
  * Search history has a functionality to save favorites which are always shown and never deleted,
  * unless user removes them manually. Currently this is not used, but may be used in future.
  * This controller moves history items to 'history favorites' and back.
+ * 
+ * @package wa-apps/contacts
  */
 class contactsContactsHistoryController extends waJsonController {
     public function execute() {

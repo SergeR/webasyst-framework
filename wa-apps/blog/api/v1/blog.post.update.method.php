@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/api/v1
+ */
 class blogPostUpdateMethod extends waAPIMethod
 {
     protected $method = 'POST';

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/import
+ */
 class blogImportPluginBackendRunController extends waLongActionController
 {
 

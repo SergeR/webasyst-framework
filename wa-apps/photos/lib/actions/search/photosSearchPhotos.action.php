@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/search
+ */
 class photosSearchPhotosAction extends waViewAction
 {
     public function execute()

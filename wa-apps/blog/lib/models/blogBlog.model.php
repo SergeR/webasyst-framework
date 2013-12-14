@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/model
+ */
 class blogBlogModel extends blogItemModel
 {
     const STATUS_PRIVATE = 'private';

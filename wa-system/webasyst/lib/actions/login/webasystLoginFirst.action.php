@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/login
+ */
 class webasystLoginFirstAction extends waViewAction
 {
     public function execute()

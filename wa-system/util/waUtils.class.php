@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/util
+ */
 class waUtils
 {
     public static function varExportToFile($var, $file, $export  = true)

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/stickies/stiky
+ */
 class StickiesStickyActions extends stickiesJsonActionsController
 {
 	/**

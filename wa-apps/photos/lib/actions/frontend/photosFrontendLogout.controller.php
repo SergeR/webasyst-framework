@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/frontend
+ */
 class photosFrontendLogoutController extends waController
 {
 	public function execute()

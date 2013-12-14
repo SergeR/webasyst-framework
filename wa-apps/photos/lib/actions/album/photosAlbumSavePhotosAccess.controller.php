@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/album
+ */
 class photosAlbumSavePhotosAccessController extends waJsonController
 {
     public function execute()

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/contacts
+ */
 class contactsRightsModel extends waModel
 {
     protected $table = 'contacts_rights';

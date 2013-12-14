@@ -5,6 +5,8 @@
  * Удаление записи из гостевой книги
  *
  * URL: ?action=delete&id=$id
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2BackendDeleteController extends waController
 {

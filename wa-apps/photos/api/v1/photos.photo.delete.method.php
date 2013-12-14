@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/api/v1
+ */
 class photosPhotoDeleteMethod extends waAPIMethod
 {
     protected $method = 'POST';

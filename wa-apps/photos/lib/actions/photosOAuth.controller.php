@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosOAuthController extends waOAuthController
 {
     public function afterAuth($data)

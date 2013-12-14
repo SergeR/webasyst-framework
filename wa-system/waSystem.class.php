@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -1113,6 +1113,7 @@ class waSystem
  * @param string $name
  * @param bool $set_current
  * @return waSystem
+ * @package wa-system
  */
 function wa($name = null, $set_current = false)
 {

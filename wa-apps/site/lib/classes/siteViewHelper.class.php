@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site
+ */
 class siteViewHelper extends waAppViewHelper
 {
     public function pages($parent_id = 0, $with_params = true)

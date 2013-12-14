@@ -1,7 +1,7 @@
 <?php
 /**
  * @author WebAsyst Team
- *
+ * @package wa-apps/blog/actions/backend
  */
 class blogBackendCalendarAction extends waViewAction
 {

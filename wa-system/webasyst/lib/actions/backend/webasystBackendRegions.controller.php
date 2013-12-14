@@ -2,6 +2,8 @@
 
 /**
  * List of regions for given country for waContactRegionField
+ * 
+ * @package wa-system/webasyst/backend
  */
 class webasystBackendRegionsController extends waJsonController
 {

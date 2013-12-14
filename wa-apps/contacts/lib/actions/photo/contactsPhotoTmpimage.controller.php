@@ -1,7 +1,11 @@
 <?php
 
-/** Contact photo upload, step one: upload and save a full-sized image
-  * to allow user to crop later. */
+/**
+ * Contact photo upload, step one: upload and save a full-sized image
+ * to allow user to crop later.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsPhotoTmpimageController extends waController
 {
     public function execute()

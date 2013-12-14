@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosPhoto
 {
     const AUTHOR_PHOTO_SIZE = 32;

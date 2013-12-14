@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/view
+ */
 class waAppViewHelper
 {
     /**

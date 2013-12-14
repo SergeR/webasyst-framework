@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waApiAuthCodesModel extends waModel
 {
     protected $id = 'code';

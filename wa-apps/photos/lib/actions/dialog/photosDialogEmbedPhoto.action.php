@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/dialog
+ */
 class photosDialogEmbedPhotoAction extends waViewAction
 {
     public function execute()

@@ -2,7 +2,7 @@
 /**
  *
  * @todo it's a draft
- *
+ * @package wa-apps/blog/plugin/import
  *
  */
 abstract class blogImportPluginTransport /* implements Serializable*/

@@ -2,6 +2,8 @@
 /**
   * Counts to show in header near applications' icons.
   * Saves its cache in session with key 'apps-count'.
+ * 
+ * @package wa-system/webasyst/backend
   */
 class webasystBackendCountController extends waJsonController
 {

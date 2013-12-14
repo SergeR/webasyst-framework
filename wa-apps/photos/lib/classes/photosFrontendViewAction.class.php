@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosFrontendViewAction extends waViewAction
 {
     public function __construct($params = null)

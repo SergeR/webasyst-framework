@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/Auth
+ */
 abstract class waAuthAdapter
 {
     

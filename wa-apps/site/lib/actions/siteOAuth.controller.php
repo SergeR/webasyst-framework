@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site
+ */
 class siteOAuthController extends waOAuthController
 {
     public function afterAuth($data)

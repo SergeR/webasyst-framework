@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/actions
+ */
 
 class blogOAuthController extends waOAuthController
 {

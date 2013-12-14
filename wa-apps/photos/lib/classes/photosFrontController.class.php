@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosFrontController extends waFrontController
 {
     public function execute($plugin = null, $module = null, $action = null, $default = false)

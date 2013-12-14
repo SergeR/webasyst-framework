@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/gravatar
+ */
 class blogGravatarPlugin extends blogPlugin
 {
     public function commentsPrepare(&$comments)

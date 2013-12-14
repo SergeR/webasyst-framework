@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/plugin
+ */
 class waPlugin
 {
     protected $id;

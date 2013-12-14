@@ -5,6 +5,8 @@
  * Фронтенд приложения Гостевая книга 2
  * @see http://www.webasyst.com/framework/docs/dev/frontend-routing/
  * @see http://www.webasyst.com/framework/docs/dev/controllers/
+ * 
+ * @package wa-apps/guestbook2
  */
 class guestbook2FrontendAction extends waViewAction
 {

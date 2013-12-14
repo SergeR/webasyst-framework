@@ -1,6 +1,10 @@
 <?php
 
-/** Group editor: edit name and a set of group members. */
+/**
+ * Group editor: edit name and a set of group members.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsEditorAction extends waViewAction
 {
     public function execute() {

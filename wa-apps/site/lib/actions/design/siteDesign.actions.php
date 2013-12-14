@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/design
+ */
 class siteDesignActions extends waDesignActions
 {
     protected $design_url = '#/design/';

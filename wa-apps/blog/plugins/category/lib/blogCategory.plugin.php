@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/category
+ */
 class blogCategoryPlugin extends blogPlugin
 {
     public function postUpdate($post)

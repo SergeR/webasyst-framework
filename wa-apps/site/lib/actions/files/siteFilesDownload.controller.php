@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/files
+ */
 class siteFilesDownloadController extends waController
 {
     public function execute()

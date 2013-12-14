@@ -1,6 +1,10 @@
 <?php
 
-/** Delete contact photo completely. */
+/**
+ * Delete contact photo completely.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsPhotoDeleteController extends waJsonController
 {
     public function execute()

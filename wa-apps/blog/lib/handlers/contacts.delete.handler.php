@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog
+ */
 class blogContactsDeleteHandler extends waEventHandler
 {
     /**

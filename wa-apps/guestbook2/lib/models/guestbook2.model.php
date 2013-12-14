@@ -4,6 +4,7 @@
  * Model for managing the database table of guestbook2
  * Модель для работы с таблицей guestbook2
  * @see http://www.webasyst.com/ru/framework/docs/dev/model/
+ * @package wa-apps/guestbook2
  */
 class guestbook2Model extends waModel
 {

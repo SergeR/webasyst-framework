@@ -1,6 +1,10 @@
 <?php
 
-/** Category editor: edit name. */
+/**
+ * Category editor: edit name.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesEditorAction extends waViewAction
 {
     public function execute() {

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/tag
+ */
 class blogTagPlugin extends blogPlugin
 {
 

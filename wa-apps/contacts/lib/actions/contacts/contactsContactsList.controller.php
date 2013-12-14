@@ -1,6 +1,10 @@
 <?php
 
-/** Everything that shows lists of contacts uses this controller. */
+/**
+ * Everything that shows lists of contacts uses this controller.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsListController extends waJsonController
 {
     protected $offset, $limit;

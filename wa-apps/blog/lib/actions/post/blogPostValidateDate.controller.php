@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/actions/post
+ */
 class blogPostValidateDateController extends waJsonController
 {
     public function execute()

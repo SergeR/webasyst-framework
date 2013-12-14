@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/publicgallery
+ */
 class photosPublicgalleryPluginBackendRatesDistributionAction extends waViewAction
 {
     public function execute()

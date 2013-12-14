@@ -4,6 +4,7 @@
  * Html view action for getting one photo
  * @see photosFrontendLoadPhotoController
  * @see photosFrontendLoadListAction
+ * @package wa-apps/photos/frontend
  */
 class photosFrontendPhotoAction extends photosFrontendViewAction
 {

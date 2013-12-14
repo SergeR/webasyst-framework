@@ -3,6 +3,7 @@
 /**
  * Json action for getting one photo
  * @see photosFrontendPhotoAction
+ * @package wa-apps/photos/plugin/publicgallery
  */
 class photosPublicgalleryPluginFrontendLoadPhotoController extends waJsonController
 {

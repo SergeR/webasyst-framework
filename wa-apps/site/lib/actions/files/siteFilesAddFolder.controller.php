@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site/files
+ */
 class siteFilesAddFolderController extends waJsonController
 {
     public function execute()

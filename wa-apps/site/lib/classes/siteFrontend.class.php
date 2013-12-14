@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site
+ */
 class siteFrontend 
 {
     protected $domain;

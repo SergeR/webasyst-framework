@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/import
+ */
 class photosImportPluginSettingsAction extends waViewAction
 {
     public function execute()

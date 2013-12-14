@@ -9,6 +9,8 @@
  * @property-read string $vendor_name
  * @property-read string $crypt_password
  * @property-read string $currency
+ * 
+ * @package wa-plugin/payment
  */
 
 class sagepayPayment extends waPayment implements waIPayment

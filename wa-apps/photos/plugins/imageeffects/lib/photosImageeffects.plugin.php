@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/imageeffects
+ */
 class photosImageeffectsPlugin extends photosPlugin
 {
     public function photoToolbar()

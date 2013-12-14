@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/helper
+ */
 class siteHelperAction extends waViewAction
 {
     public function execute()

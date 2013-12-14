@@ -6,6 +6,7 @@
  * Экшен фронтенда
  * Здесь реализуется вся логика для фронтенда приложения гостевая книга
  *
+ * @package wa-apps/guestbook
  */
 class guestbookFrontendAction extends waViewAction
 {

@@ -2,6 +2,8 @@
 
 /**
  * Builder of forms containing contact fields.
+ * 
+ * @package wa-system/Contact
  */
 class waContactForm
 {

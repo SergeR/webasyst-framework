@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/site/layout
+ */
 class siteFrontendLayout extends waLayout
 {
     public function execute()

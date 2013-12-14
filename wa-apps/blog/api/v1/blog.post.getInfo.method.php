@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/api/v1
+ */
 class blogPostGetInfoMethod extends waAPIMethod
 {
     protected $method = 'GET';

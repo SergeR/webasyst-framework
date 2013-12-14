@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/favorite
+ */
 class blogFavoritePluginBackendDeleteController extends waJsonController
 {
 	

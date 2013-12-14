@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog
+ */
 class blogRightConfig extends waRightConfig
 {
     const RIGHT_NONE		 = 0;

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/plugin/category
+ */
 class blogCategoryModel extends waModel
 {
     protected $table = 'blog_category';

@@ -1,7 +1,7 @@
 <?php
 /**
  * @link http://www.livejournal.com/doc/server/ljp.csp.xml-rpc.protocol.html
- *
+ * @package wa-apps/blog/plugin/import
  */
 
 class blogImportPluginLjTransport extends blogImportPluginXmlrpcTransport

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/stack
+ */
 class photosStackPhotoMoveController extends waJsonController
 {
     public function execute()

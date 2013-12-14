@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/stickies
+ */
 class stickiesRightConfig extends waRightConfig
 {
 	public function init()

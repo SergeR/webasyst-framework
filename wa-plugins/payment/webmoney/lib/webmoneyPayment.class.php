@@ -10,6 +10,7 @@
  * @property-read string $LMI_SIM_MODE
  * @property-read string $TESTMODE
  * @property-read string $protocol
+ * @package wa-plugin/payment
  */
 class webmoneyPayment extends waPayment implements waIPayment
 {

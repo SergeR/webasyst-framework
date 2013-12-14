@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/import
+ */
 class photosImportFolderTransport extends photosImportTransport
 {
     public function initOptions()

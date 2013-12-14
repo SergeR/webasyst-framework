@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/backend
+ */
 class photosBackendLogController extends waJsonController
 {
     public function execute()

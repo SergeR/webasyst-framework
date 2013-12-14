@@ -3,6 +3,7 @@
 /**
  * Lazy loading photostream in one-photo page
  * @see photosFrontendPhotoAction
+ * @package wa-apps/photos/plugin/publicgallery
  */
 class photosPublicgalleryPluginFrontendLoadListAction extends waViewAction
 {

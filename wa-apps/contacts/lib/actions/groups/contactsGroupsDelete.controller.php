@@ -1,6 +1,10 @@
 <?php
 
-/** Delete a user group */
+/**
+ * Delete a user group
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsDeleteController extends waJsonController
 {
     public function execute()

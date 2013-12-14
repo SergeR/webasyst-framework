@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog/actions/post
+ */
 class blogPostAction extends waViewAction
 {
     public function execute()

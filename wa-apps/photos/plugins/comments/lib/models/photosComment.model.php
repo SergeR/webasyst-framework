@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/plugin/comment
+ */
 class photosCommentModel extends waNestedSetModel
 {
     const STATUS_DELETED	 = 'deleted';

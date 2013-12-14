@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosRightConfig extends waRightConfig
 {
     public function init()

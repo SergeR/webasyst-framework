@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-apps/contacts
+ */
 class contactsAnalyticsConfig extends waAnalyticsConfig
 {
 	

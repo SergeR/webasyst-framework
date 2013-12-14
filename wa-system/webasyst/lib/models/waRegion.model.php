@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waRegionModel extends waModel
 {
     protected $id = array('country_iso3', 'code');

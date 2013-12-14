@@ -1,7 +1,7 @@
 <?php
 /**
  * @author WebAsyst Team
- *
+ * @package wa-apps/blog/actions/plugin
  */
 class blogPluginsAction extends waViewAction
 {

@@ -1,5 +1,7 @@
 <?php
 /**
+ * @package wa-system/payment
+ * 
  * @property string $id
  * @property string $id_str
  *

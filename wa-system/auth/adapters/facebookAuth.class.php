@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/Auth/Adapters
+ */
 class facebookAuth extends waOAuth2Adapter
 {
 

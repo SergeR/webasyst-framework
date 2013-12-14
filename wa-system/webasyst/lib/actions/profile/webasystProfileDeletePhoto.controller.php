@@ -1,6 +1,10 @@
 <?php
 
-/** Delete contact photo completely. */
+/**
+ * Delete contact photo completely.
+ * 
+ * @package wa-system/webasyst/profile
+ */
 class webasystProfileDeletePhotoController extends waJsonController
 {
     public function execute()

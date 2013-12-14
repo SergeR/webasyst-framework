@@ -1,6 +1,10 @@
 <?php
 
-/** Add or delete a set of contacts to/from a set of categories. */
+/**
+ * Add or delete a set of contacts to/from a set of categories.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesController extends waJsonController
 {
     public function execute()

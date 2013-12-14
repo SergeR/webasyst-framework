@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * @package wa-system/webasyst/config
+ */
 class webasystSitemapConfig extends waSitemapConfig
 {
     public function execute()

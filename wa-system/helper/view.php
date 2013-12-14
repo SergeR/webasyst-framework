@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @package wa-system
+ * @return string
+ */
 function wa_header()
 {
     $system = waSystem::getInstance();
@@ -160,11 +163,19 @@ HTML;
     return $html;
 }
 
+/**
+ * 
+ * @param bool $absolute
+ * @package wa-system
+ */
 function wa_url($absolute = false)
 {
     return waSystem::getInstance()->getRootUrl($absolute);
 }
 
+/**
+ * @package wa-system
+ */
 function wa_backend_url()
 {
     return waSystem::getInstance()->getConfig()->getBackendUrl(true);

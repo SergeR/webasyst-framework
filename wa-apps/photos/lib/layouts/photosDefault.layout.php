@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosDefaultLayout extends waLayout
 {
     public function execute()

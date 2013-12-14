@@ -22,6 +22,8 @@
   *
   * You may use array access instead of field access:
   * $r->field is the same as $r['field']
+ * 
+ * @package wa-system/database
   */
 class waDbRecord extends waArrayObjectDiff
 {

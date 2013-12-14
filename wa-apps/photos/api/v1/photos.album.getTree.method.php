@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/api/v1
+ */
 class photosAlbumGetTreeMethod extends waAPIMethod
 {
     protected $method = 'GET';

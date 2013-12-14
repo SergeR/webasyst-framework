@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/model
+ */
 class waContactDataModel extends waModel
 {
     protected $table = "wa_contact_data";

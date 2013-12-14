@@ -3,9 +3,17 @@
 /**
  * Represents a hidden field that always returns the same value.
  * Primarily used with waContactForm class.
+ * 
+ * @package wa-system/Contact
  */
 class waContactHiddenField extends waContactField
 {
+    /**
+     * 
+     * @param array $params
+     * @param string $attrs
+     * @return string
+     */
     public function getHtmlOne($params = array(), $attrs = '')
     {
         $value = $this->getParameter('value');

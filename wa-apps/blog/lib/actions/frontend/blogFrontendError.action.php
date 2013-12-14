@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/actions/frontend
+ */
 class blogFrontendErrorAction extends blogViewAction
 {
     public function execute()

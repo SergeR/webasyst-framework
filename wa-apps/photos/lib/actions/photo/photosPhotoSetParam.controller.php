@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/photo
+ */
 class photosPhotoSetParamController extends waJsonController
 {
     private $availableParams = array(

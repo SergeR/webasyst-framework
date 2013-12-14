@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -9,13 +9,14 @@
  * @link http://www.webasyst.com/
  * @author Webasyst LLC
  * @copyright 2011 Webasyst LLC
- * @package wa-system
- * @subpackage contact
+ * @package wa-system/Contact
+ * @license http://www.webasyst.com/framework/license/ LGPL
  */
 abstract class waContactField
 {
     protected $id;
     /**
+     * @var array
      * Available options
      *
      * array(
@@ -45,7 +46,10 @@ abstract class waContactField
      */
     protected $options;
 
-    /** array(locale => name) */
+    /**
+     *
+     * @var array (locale => name)
+     */
     protected $name = array();
 
     /** used by __set_state() */

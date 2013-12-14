@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/login
+ */
 class webasystLoginAction extends waLoginAction
 {
 

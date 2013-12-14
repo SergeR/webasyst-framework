@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/guestbook2
+ */
 class guestbook2DesignActions extends waDesignActions
 {
 

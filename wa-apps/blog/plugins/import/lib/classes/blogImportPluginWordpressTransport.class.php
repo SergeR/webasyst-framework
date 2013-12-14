@@ -4,7 +4,7 @@
  * @link http://codex.wordpress.org/XML-RPC_WordPress_API
  * @link http://codex.wordpress.org/XML-RPC_Support
  * @version draft
- *
+ * @package wa-apps/blog/plugin/import
  *
  */
 class blogImportPluginWordpressTransport extends blogImportPluginXmlrpcTransport

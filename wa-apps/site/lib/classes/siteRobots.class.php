@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/site
+ */
 class siteRobots
 {
     protected $domain;

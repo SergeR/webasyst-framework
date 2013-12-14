@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/api/v1
+ */
 class photosAlbumSearchMethod extends waAPIMethod
 {
     public function execute()

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/api
+ */
 class webasystApiAuthAction extends waViewAction
 {
     protected $client_id;

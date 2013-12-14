@@ -2,7 +2,7 @@
 /**
  * 
  * @author WebAsyst Team
- *
+ * @package wa-apps/stickies/api/v1
  */
 class stickiesSheetAddMethod extends waAPIMethod
 {

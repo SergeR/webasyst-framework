@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos
+ */
 class photosSignupAction extends waSignupAction
 {
     public function execute()

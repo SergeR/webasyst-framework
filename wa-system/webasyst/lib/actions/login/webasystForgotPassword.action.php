@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/login
+ */
 class webasystForgotPasswordAction extends waForgotPasswordAction
 {
     public function execute()

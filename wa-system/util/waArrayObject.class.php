@@ -17,6 +17,8 @@
  * // more magic
  * $a->e = array('r' => array('t' => 3));
  * echo $a->e->r->t; // == 3
+ * 
+ * @package wa-system/util
  */
 class waArrayObject implements ArrayAccess, IteratorAggregate
 {

@@ -5,6 +5,8 @@
  *
  * This action is also used in own profile editor, even when user has no access to Contacts app.
  * See 'profile' module in 'webasyst' system app.
+ * 
+ * @package wa-apps/contacts
  */
 class contactsContactsInfoAction extends waViewAction
 {

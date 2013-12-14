@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-system/webasyst/layout
+ */
 class webasystLoginLayout extends waLayout
 {
     public function execute()

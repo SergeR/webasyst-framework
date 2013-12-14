@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/stickies
+ */
 class stickiesModel extends waModel
 {
     /**

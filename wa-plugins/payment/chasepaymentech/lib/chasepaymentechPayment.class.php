@@ -14,6 +14,7 @@
  * @property-read string $currexp
  * @property-read string $orderstatus
  * @property-read string $platform
+ * @package wa-plugin/payment
  */
 
 class chasepaymentechPayment extends waPayment implements waIPayment

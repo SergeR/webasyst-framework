@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/photos/api/v1
+ */
 class photosAlbumUpdateMethod extends waAPIMethod
 {
     protected $method = 'POST';

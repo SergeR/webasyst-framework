@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-system/shipping
+ */
 abstract class waAppShipping
 {
     protected $app_id;

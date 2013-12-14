@@ -10,6 +10,7 @@
  * @property-read string $instid
  * @property-read string $md5_secret
  * @property-read string $response_password
+ * @package wa-plugin/payment
  */
 
 class worldpayPayment extends waPayment implements waIPayment

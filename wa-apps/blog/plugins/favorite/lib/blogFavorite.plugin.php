@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @package wa-apps/blog/plugin/favorite
+ */
 class blogFavoritePlugin extends blogPlugin
 {
     public function backendSidebar($param)

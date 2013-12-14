@@ -1,6 +1,6 @@
 <?php
-
 /**
+ * @package wa-system/Auth/Adapters
  * @see https://code.google.com/apis/console/
  */
 class googleAuth extends waOAuth2Adapter

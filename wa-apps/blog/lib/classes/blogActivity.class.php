@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package wa-apps/blog
+ */
 class blogActivity
 {
     /**
