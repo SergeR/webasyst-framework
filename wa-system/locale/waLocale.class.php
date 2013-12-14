@@ -310,6 +310,7 @@ class waLocale
  * @param int $n
  * @param bool $sprintf
  * @return string
+ * @package wa-system/locale
  */
 function _w($msgid1, $msgid2 = null, $n = null, $sprintf = true)
 {
@@ -329,7 +330,10 @@ function _w($msgid1, $msgid2 = null, $n = null, $sprintf = true)
     }
 }
 
-/** Copy of sprintf() with the first (string) argument passed to _wp() beforehand. */
+/**
+ * Copy of sprintf() with the first (string) argument passed to _wp() beforehand.
+ * @package wa-system/locale
+ */
 function sprintf_wp()
 {
     $args = func_get_args();
@@ -345,6 +349,7 @@ function sprintf_wp()
  * @param int $n
  * @param bool $sprintf
  * @return string
+ * @package wa-system/locale
  */
 function _ws($msgid1, $msgid2 = null, $n = null, $sprintf = true)
 {
@@ -360,6 +365,7 @@ function _ws($msgid1, $msgid2 = null, $n = null, $sprintf = true)
  * @param int $n
  * @param bool $sprintf
  * @return string
+ * @package wa-system/locale
  */
 function _wd($domain, $msgid1, $msgid2 = null, $n = null, $sprintf = true)
 {
@@ -386,6 +392,7 @@ function _wd($domain, $msgid1, $msgid2 = null, $n = null, $sprintf = true)
  * @param int $n
  * @param bool $sprintf
  * @return string
+ * @package wa-system/locale
  */
 function _wp($msgid1, $msgid2 = null, $n = null, $sprintf = true)
 {
