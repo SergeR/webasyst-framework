@@ -9,6 +9,8 @@
  * - Adds <pre> and escapes all output with htmlspecialchars(), unless in CLI mode.
  * - Shows both protected and private fields of objects.
  * - Skips huge objects like waSystem or Smarty in nested structures.
+ * 
+ * @package wa-system
  */
 function wa_dump()
 {
@@ -17,7 +19,11 @@ function wa_dump()
     exit;
 }
 
-/** Same as wa_dump(), but does not call exit. */
+/**
+ * Same as wa_dump(), but does not call exit.
+ * @see wa_dump()
+ * @package wa-system
+ */
 function wa_dumpc()
 {
     if (php_sapi_name() != 'cli') {
@@ -49,6 +55,7 @@ function wa_dumpc()
 /**
  * Alias for wa_dump()
  * @deprecated
+ * @package wa-system
  */
 function wa_print_r()
 {
@@ -60,6 +67,8 @@ function wa_print_r()
 /**
  * Helper to chain constructor calls.
  * When argument is an object, return it. Otherwise, throw waException.
+ * 
+ * @package wa-system
  */
 function wao($o)
 {
@@ -69,7 +78,11 @@ function wao($o)
     return $o;
 }
 
-/** Wrapper around create_function() that caches functions it creates to avoid memory leaks when used in a loop. */
+/**
+ * Wrapper around create_function() that caches functions it creates to avoid memory leaks when used in a loop.
+ * 
+ * @package wa-system
+ */
 function wa_lambda($args, $body)
 {
     if (!isset($body)) {
@@ -88,6 +101,8 @@ function wa_lambda($args, $body)
  * Return value of $var or $def when $var is unset.
  * Use of this function does not produce a notice for undefined vars and array indexes,
  * but has a side-effect of creating var or index with NULL value.
+ * 
+ * @package wa-system
  */
 function ifset(&$var, $def=null)
 {
@@ -101,6 +116,8 @@ function ifset(&$var, $def=null)
  * Return value of $var or $def when $var is empty.
  * Use of this function does not produce a notice for undefined vars and array indexes,
  * but has a side-effect of creating var or index with NULL value.
+ * 
+ * @package wa-system
  */
 function ifempty(&$var, $def=null)
 {
@@ -113,6 +130,7 @@ function ifempty(&$var, $def=null)
 /**
  * Check if the given value represents integer.
  * @return boolean true if $val contains integer or a string that represents integer.
+ * @package wa-system
  */
 function wa_is_int($val)
 {
@@ -128,6 +146,7 @@ function wa_is_int($val)
  * @param $val
  * @return bool
  * @deprecated
+ * @package wa-system
  */
 function int_ok($val)
 {
@@ -136,6 +155,7 @@ function int_ok($val)
 
 /**
  * Helper function for wa_print_r() / wa_dump()
+ * @package wa-system
  */
 function wa_dump_helper(&$value, &$level_arr = array(), $cli = null)
 {
@@ -229,6 +249,13 @@ function wa_dump_helper(&$value, &$level_arr = array(), $cli = null)
     return $str;
 }
 
+/**
+ * 
+ * @param string $string
+ * @param string $separator
+ * @return string
+ * @package wa-system
+ */
 function wa_make_pattern($string, $separator = '/')
 {
     $metacharacters = array('?','+','*','.','(',')','[',']','{','}','<','>','^','$');
