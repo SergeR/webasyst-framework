@@ -1,6 +1,6 @@
 <?php 
 /**
- * 
+ * @package wa-apps/site
  */
 class sitePageParamsModel extends waPageParamsModel
 {
