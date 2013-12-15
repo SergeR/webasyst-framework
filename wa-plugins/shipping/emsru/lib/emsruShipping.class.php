@@ -219,6 +219,14 @@ class emsruShipping extends waShipping
         return $addresses;
     }
 
+    /**
+     * Выполняет запрос к серверу EMS Russia
+     * 
+     * @param string $method
+     * @param array $params
+     * @return array
+     * @throws waException
+     */
     private function request($method, $params = array())
     {
         $methods = array(
