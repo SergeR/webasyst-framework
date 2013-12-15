@@ -260,6 +260,10 @@ abstract class waShipping extends waSystemPlugin
         return array();
     }
 
+    /**
+     * Array of required address fields
+     * @return array
+     */
     public function requestedAddressFields()
     {
         return array();
@@ -276,7 +280,6 @@ abstract class waShipping extends waSystemPlugin
     abstract protected function calculate();
 
     /**
-     *
      * Returns shipment current tracking info
      * @return string Tracking information (HTML)
      */
@@ -286,7 +289,6 @@ abstract class waShipping extends waSystemPlugin
     }
 
     /**
-     *
      * External shipping service callback handler
      * @param array $params
      * @param string $module_id

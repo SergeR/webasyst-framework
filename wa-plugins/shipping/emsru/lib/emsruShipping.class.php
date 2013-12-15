@@ -180,6 +180,10 @@ class emsruShipping extends waShipping
         );
     }
 
+    /**
+     * Возвращает список возможных адресов.
+     * @return array
+     */
     public function allowedAddress()
     {
         $cache = new waSerializeCache(__CLASS__.__FUNCTION__, 86400, 'webasyst');
