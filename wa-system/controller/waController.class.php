@@ -177,7 +177,7 @@ abstract class waController
         return $path;
     }
 
-    public function redirect($params = array())
+    public function redirect($params = array(), $code = null)
     {
         if ((!is_array($params) && $params)) {
             $params = array(
@@ -185,10 +185,8 @@ abstract class waController
             );
         }
         if (isset($params['url']) && $params['url']) {
-            header('Location: '.$params['url']);
-            exit;
+            wa()->getResponse()->redirect($params['url'], $code);
         }
-
         if ($params) {
             $url = waSystem::getInstance()->getUrl();
             $i = 0;
@@ -198,9 +196,7 @@ abstract class waController
         } else {
             $url = waSystem::getInstance()->getConfig()->getCurrentUrl();
         }
-
-        header('Location: '.$url);
-        exit;
+        wa()->getResponse()->redirect($url, $code);
     }
 
 

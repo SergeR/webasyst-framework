@@ -90,10 +90,15 @@ class siteRoutingSaveController extends waJsonController
         } else {
             $old = $routes[$domain][$route_id];
             $routes[$domain][$route_id] = $this->getRoute($old);
+
             // save
             waUtils::varExportToFile($routes, $path);
 
             $this->response['url'] = $routes[$domain][$route_id]['url'];
+
+            if (isset($routes[$domain][$route_id]['redirect'])) {
+                $this->response['redirect'] = $routes[$domain][$route_id]['redirect'];
+            }
 
             if (!isset($routes[$domain][$route_id]['redirect']) && $routes[$domain][$route_id]['url'] != $old['url']) {
                 // update pages
@@ -190,7 +195,7 @@ class siteRoutingSaveController extends waJsonController
         }
 
         foreach ($params as $key => $value) {
-            if ($key != '_name' || $value != $name || (isset($r['_name']) && $value != $r['_name'])) {
+            if ($key != '_name' || (isset($name) && $value != $name) || (isset($r['_name']) && $value != $r['_name'])) {
                 $r[$key] = $value;
             }
         }
