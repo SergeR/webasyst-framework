@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * @property string $test_mode
  * @property string $api_key
@@ -200,7 +198,7 @@ class australiapostShipping extends waShipping
     }
 
     /**
-     * @return array
+     * {@inheritdoc}
      */
     public function requestedAddressFields()
     {

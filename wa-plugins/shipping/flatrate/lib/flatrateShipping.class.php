@@ -130,6 +130,9 @@ class flatrateShipping extends waShipping
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return $this->prompt_address ? array() : false;

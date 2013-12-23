@@ -284,6 +284,9 @@ class fedexShipping extends waShipping
         return $this->services;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

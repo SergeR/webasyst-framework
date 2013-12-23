@@ -82,6 +82,9 @@ class pickupShipping extends waShipping
         return 'kg';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return $this->prompt_address ? array() : false;

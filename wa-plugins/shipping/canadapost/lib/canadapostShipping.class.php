@@ -217,6 +217,9 @@ class canadapostShipping extends waShipping
         }
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

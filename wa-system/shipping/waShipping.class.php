@@ -1,6 +1,7 @@
 <?php
-
 /**
+ * Базовый класс для плагинов доставки
+ * 
  * This file is part of Webasyst framework.
  *
  * Licensed under the terms of the GNU Lesser General Public License (LGPL).
@@ -261,8 +262,17 @@ abstract class waShipping extends waSystemPlugin
     }
 
     /**
-     * Array of required address fields
-     * @return array
+     * Array of required address fields.
+     * 
+     * @return array В качестве ключа должно быть название поля 
+     *                [country|region|city|street|zip], в качестве
+     *                значения массив с необязательными параметрами
+     *                - required => bool переопределяет глобальную настройку
+     *                - hidden => bool делает поле скрытым
+     *                - value => string определяет значение поля
+     *                - cost => bool требуется для расчета доставки
+     * 
+     * @see http://www.handmadesite.net/2013/12/polya-adresa-pri-oformlenii-zakaza-shop-script-5/
      */
     public function requestedAddressFields()
     {
@@ -275,7 +285,7 @@ abstract class waShipping extends waSystemPlugin
     }
 
     /**
-     *
+     * Calculate the shipping cost/costs
      */
     abstract protected function calculate();
 

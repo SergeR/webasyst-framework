@@ -161,6 +161,9 @@ class courierShipping extends waShipping
         return $this->weight_dimension;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

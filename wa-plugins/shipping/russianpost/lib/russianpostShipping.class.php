@@ -149,6 +149,9 @@ class russianpostShipping extends waShipping
         return array($address);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

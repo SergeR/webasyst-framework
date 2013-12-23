@@ -169,6 +169,9 @@ class emsruShipping extends waShipping
         return 'kg';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

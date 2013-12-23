@@ -160,6 +160,9 @@ class uspsShipping extends waShipping
         return $this->path;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

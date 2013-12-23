@@ -363,6 +363,9 @@ class upsShipping extends waShipping
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(

@@ -194,6 +194,9 @@ class dhlShipping extends waShipping
         return $this->services;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function requestedAddressFields()
     {
         return array(
