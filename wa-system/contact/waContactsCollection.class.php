@@ -6,6 +6,7 @@ class waContactsCollection
 {
     protected $hash;
 
+    protected $fields = array();
     protected $order_by;
     protected $group_by;
     protected $where;
@@ -113,7 +114,11 @@ class waContactsCollection
             $this->post_fields['_internal'] = array('_online_status');
             $this->post_fields['email'] = array('email');
             $this->post_fields['data'] = array();
-            return 'c.'.implode(",c.", $fields);
+            $result = 'c.'.implode(",c.", $fields);
+            foreach($this->fields as $alias => $expr) {
+                $result .= ",".$expr.' AS '.$alias;
+            }
+            return $result;
         }
 
         $required_fields = array('id' => 'c'); // field => table, to be added later in any case
@@ -151,6 +156,10 @@ class waContactsCollection
 
         foreach ($required_fields as $field => $table) {
             $fields[] = ($table ? $table."." : '').$field;
+        }
+
+        foreach($this->fields as $alias => $expr) {
+            $fields[] = $expr.' AS '.$alias;
         }
 
         return implode(",", $fields);
@@ -665,13 +674,14 @@ class waContactsCollection
         }
         $field = trim($field);
         if ($field == '~data') {
+            $this->fields['data_count'] = 'count(*)';
             $this->joins[] = array(
                 'table' => 'wa_contact_data',
                 'alias' => 'd',
                 'type' => 'LEFT'
             );
             $this->group_by = 'c.id';
-            return $this->order_by = 'count(*) '.$order;
+            return $this->order_by = 'data_count '.$order;
         } else if ($field) {
             $contact_model = $this->getModel();
             if ($contact_model->fieldExists($field)) {
