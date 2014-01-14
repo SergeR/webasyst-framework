@@ -40,7 +40,7 @@ class waContactPhoneField extends waContactStringField
         if (isset($params['value'])) {
             $params['value'] = $this->format($params['value'], 'value');
         }
-        $params['type']='phone';
+        $params['type']='tel';
         return parent::getHtmlOne($params, $attrs);
     }
 }
