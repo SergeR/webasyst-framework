@@ -325,7 +325,7 @@ class waContactFields
             throw new waException('Unable to find field '.$id.' in '.$file);
         }
         unset($fields[$k]);
-        file_put_contents($file, "<?php\nreturn ".var_export(array_values($fields), TRUE).";\n// EOF");
+        waUtils::varExportToFile(array_values($fields), $file, true);
         unset(self::$fieldStatus[$id], self::$personDisabled[$id], self::$companyDisabled[$id]);
     }
 
@@ -366,7 +366,7 @@ class waContactFields
         if (!$changed) {
             $fields[] = $field;
         }
-        file_put_contents($file, "<?php\nreturn ".var_export($fields, TRUE).";\n// EOF");
+        waUtils::varExportToFile($fields, $file, true);
 
         // Update static vars
         self::$fieldStatus[$id] = false;
@@ -464,7 +464,7 @@ class waContactFields
         if ($position !== FALSE) {
             $contactOrder[$id] = $cp;
         }
-        file_put_contents($fileWrite, "<?php\nreturn ".var_export($contactOrder, TRUE).";\n// EOF");
+        waUtils::varExportToFile($contactOrder, $fileWrite, true);
     }
 
     /**
@@ -518,7 +518,7 @@ class waContactFields
         }
         $contactOrder = include($file);
         unset($contactOrder[$id]);
-        file_put_contents($file, "<?php\nreturn ".var_export($contactOrder, TRUE).";\n// EOF");
+        waUtils::varExportToFile($contactOrder, $file, true);
     }
 
     /**
