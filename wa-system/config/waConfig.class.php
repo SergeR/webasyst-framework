@@ -10,6 +10,7 @@
  * @copyright 2011 Webasyst LLC
  * @package wa-system/Config
  * @license http://www.webasyst.com/framework/license/ LGPL
+ * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/
  */
 class waConfig
 {
@@ -22,6 +23,7 @@ class waConfig
    * @param mixed  $default A default value
    *
    * @return mixed value, if the config parameter exists, otherwise null
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-get
    */
   public static function get($name, $default = null)
   {
@@ -34,6 +36,7 @@ class waConfig
    * @param string $name A config parameter name
    *
    * @return bool true, if the config parameter exists, otherwise false
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-has
    */
   public static function has($name)
   {
@@ -47,6 +50,7 @@ class waConfig
    *
    * @param string $name  A config parameter name
    * @param mixed  $value A config parameter value
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-set
    */
   public static function set($name, $value)
   {
@@ -60,6 +64,7 @@ class waConfig
    * array, the associated value will be overridden.
    *
    * @param array $parameters An associative array of config parameters and their associated values
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-add
    */
   public static function add($parameters = array())
   {
@@ -70,6 +75,7 @@ class waConfig
    * Retrieves all configuration parameters.
    *
    * @return array An associative array of configuration parameters.
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-getAll
    */
   public static function getAll()
   {
@@ -78,6 +84,7 @@ class waConfig
 
   /**
    * Clears all current config parameters.
+   * @see http://www.webasyst.ru/developers/docs/basics/classes/waConfig/#method-clear
    */
   public static function clear()
   {
