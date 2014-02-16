@@ -10,6 +10,7 @@
  * @copyright 2011 Webasyst LLC
  * @package wa-system/Contact
  * @license http://www.webasyst.com/framework/license/ LGPL
+ * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/
  */
 class waContact implements ArrayAccess
 {
@@ -72,21 +73,43 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getId
+     * @return int
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getName
+     * @return string
+     */
     public function getName()
     {
         return $this->get('name');
     }
 
+    /**
+     * @param int $width
+     * @param int $height
+     * @return string
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPhoto
+     */
     public function getPhoto($width = null, $height = null)
     {
         return self::getPhotoUrl($this->id, $this->id ? $this->get('photo') : null, $width, $height);
     }
 
+    /**
+     * @param int $id
+     * @param int $ts
+     * @param int $width
+     * @param type $height
+     * @return string
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPhotoUrl
+     */
     public static function getPhotoUrl($id, $ts, $width = null, $height = null)
     {
         if ($width === 'original') {
@@ -119,6 +142,12 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setPhoto
+     * @param string $file
+     * @return string
+     * @throws waException
+     */
     public function setPhoto($file)
     {
         if (!file_exists($file)) {
@@ -147,7 +176,8 @@ class waContact implements ArrayAccess
     /**
      * Delete contact
      *
-     * @return bool result
+     * @return boolean result
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-delete
      */
     public function delete()
     {
@@ -167,6 +197,7 @@ class waContact implements ArrayAccess
      * @param string $format   data format to use. Default is the same as $this[$field_id].
      *                          'value' for simple
      * @return mixed
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-get
      */
     public function get($field_id, $format = null)
     {
@@ -277,6 +308,9 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getFirst
+     */
     public function getFirst($field_id)
     {
         $value = $this->get($field_id);
@@ -300,6 +334,12 @@ class waContact implements ArrayAccess
         return substr($this['password'], 0, 6).$this->id.substr($this['password'], -6);
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-load
+     * @param string|boolean $format
+     * @param string|boolean $all
+     * @return array
+     */
     public function load($format = false, $all = false)
     {
         if (!$this->id) {
@@ -348,6 +388,11 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-validate
+     * @param array $data
+     * @return array
+     */
     public function validate($data=array())
     {
         foreach ($data as $key => $value) {
@@ -382,6 +427,7 @@ class waContact implements ArrayAccess
      * @param array $data
      * @param bool $validate
      * @return int|array
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-save
      */
     public function save($data = array(), $validate = false)
     {
@@ -480,6 +526,10 @@ class waContact implements ArrayAccess
         return $errors ? $errors : 0;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getLocale
+     * @return string Contact locale
+     */
     public function getLocale()
     {
         if (!$this->id) {
@@ -510,6 +560,10 @@ class waContact implements ArrayAccess
         return $locale;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getTimezone
+     * @return string
+     */
     public function getTimezone()
     {
         $timezone = $this->get('timezone');
@@ -526,6 +580,7 @@ class waContact implements ArrayAccess
      * @param string $field_id field to retrieve data for; omit to get all data from cache
      * @param mixed $old_value true to consider only values from DB; false (default) to add values set to this contact but not saved yet
      * @return array|null
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getCache
      */
     public function getCache($field_id = null, $old_value = false)
     {
@@ -621,6 +676,13 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @param string $app_id
+     * @param string $name
+     * @param string $default
+     * @return string
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getSettings
+     */
     public function getSettings($app_id, $name = null, $default = null)
     {
         // For general settings
@@ -640,6 +702,12 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setSettings
+     * @param string $app_id
+     * @param string $name
+     * @param mixed $value
+     */
     public function setSettings($app_id, $name, $value = null)
     {
         $setting_model = new waContactSettingsModel();
@@ -649,6 +717,9 @@ class waContact implements ArrayAccess
         return $setting_model->set($this->id, $app_id, $name, $value);
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-delSettings
+     */
     public function delSettings($app_id, $name)
     {
         $setting_model = new waContactSettingsModel();
@@ -661,8 +732,9 @@ class waContact implements ArrayAccess
      *
      * @param string $app_id - application id (contacs, orders, ...)
      * @param string $name - key of the right, if it is null method return all rights of the contact for application
-     * @param bool $assoc - only if $name is null when true returns associative array of the rights
-     * @return int|bool
+     * @param boolean $assoc - only if $name is null when true returns associative array of the rights
+     * @return int|boolean|array
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getRights
      */
     public function getRights($app_id, $name = null, $assoc = true)
     {
@@ -704,6 +776,7 @@ class waContact implements ArrayAccess
      *
      * @param string $app_id
      * @return bool - true if contact is admin
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-isAdmin
      */
     public function isAdmin($app_id = 'webasyst')
     {
@@ -723,6 +796,7 @@ class waContact implements ArrayAccess
      * @param int $value
      *
      * @return bool - result
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setRight
      */
     public function setRight($app_id, $name, $value)
     {
@@ -734,6 +808,10 @@ class waContact implements ArrayAccess
     }
 
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getStatus
+     * @return string
+     */
     public function getStatus()
     {
         if (!$this->get('login')) {
@@ -764,6 +842,11 @@ class waContact implements ArrayAccess
     }
 
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-add
+     * @param string $field
+     * @param string $value
+     */
     public function add($field, $value)
     {
         $this->set($field, $value, true);
@@ -785,6 +868,7 @@ class waContact implements ArrayAccess
      *
      * @param string $password
      * @return string
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPasswordHash
      */
     public static function getPasswordHash($password)
     {
@@ -800,6 +884,7 @@ class waContact implements ArrayAccess
      *
      * @param int|string $category_id - id or system key (app_id) of the category
      * @throws waException
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-addToCategory
      */
     public function addToCategory($category_id)
     {
@@ -817,6 +902,12 @@ class waContact implements ArrayAccess
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-set
+     * @param mixed $field_id
+     * @param mixed $value
+     * @param boolean $add
+     */
     public function set($field_id, $value, $add = false)
     {
         if (strpos($field_id, '.') !== false) {
@@ -856,6 +947,10 @@ class waContact implements ArrayAccess
     }
 
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getTime
+     * @return string
+     */
     public function getTime()
     {
         return waDateTime::format("datetime", null, $this->get('timezone'), $this->getLocale());
