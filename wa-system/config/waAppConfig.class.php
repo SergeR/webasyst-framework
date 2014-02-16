@@ -10,6 +10,7 @@
  * @copyright 2011 Webasyst LLC
  * @package wa-system/Config
  * @license http://www.webasyst.com/framework/license/ LGPL
+ * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/
  */
 class waAppConfig extends SystemConfig
 {
@@ -36,6 +37,10 @@ class waAppConfig extends SystemConfig
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getApplication
+     * @return string
+     */
     public function getApplication()
     {
         return $this->application;
@@ -78,6 +83,7 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getOption
      * @param string $name
      * @return mixed
      */
@@ -401,16 +407,33 @@ class waAppConfig extends SystemConfig
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppPath
+     * @param string $path
+     * @return string
+     */
     public function getAppPath($path = null)
     {
         return $this->getRootPath().DIRECTORY_SEPARATOR.'wa-apps'.DIRECTORY_SEPARATOR.$this->application.($path ? DIRECTORY_SEPARATOR.$path : '');
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppConfigPath
+     * @param string $name
+     * @return string
+     */
     public function getAppConfigPath($name)
     {
         return $this->getAppPath("lib/config/".$name.".php");
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getConfigPath
+     * @param string $name
+     * @param boolean $user_config
+     * @param string $app
+     * @return string
+     */
     public function getConfigPath($name, $user_config = true, $app = null)
     {
         if ($app === null) {
@@ -446,11 +469,20 @@ class waAppConfig extends SystemConfig
         return $this->prefix;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getName
+     * @return string
+     */
     public function getName()
     {
         return $this->getInfo('name');
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getInfo
+     * @param string $name
+     * @return mixed
+     */
     public function getInfo($name = null)
     {
         if ($name === null) {
@@ -460,11 +492,21 @@ class waAppConfig extends SystemConfig
         }
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginPath
+     * @param string $plugin_id
+     * @return string
+     */
     public function getPluginPath($plugin_id)
     {
         return $this->getAppPath()."/plugins/".$plugin_id;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginInfo
+     * @param string $plugin_id
+     * @return array
+     */
     public function getPluginInfo($plugin_id)
     {
         if ($this->plugins === null) {
@@ -473,6 +515,10 @@ class waAppConfig extends SystemConfig
         return isset($this->plugins[$plugin_id]) ? $this->plugins[$plugin_id] : array();
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPlugins
+     * @return array
+     */
     public function getPlugins()
     {
         if ($this->plugins === null) {
@@ -567,6 +613,10 @@ class waAppConfig extends SystemConfig
         return null;
     }
 
+    /**
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-setCount
+     * @param int $n
+     */
     public function setCount($n = null)
     {
         $count = wa()->getStorage()->get('apps-count');
