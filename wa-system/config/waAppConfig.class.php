@@ -14,6 +14,10 @@
  */
 class waAppConfig extends SystemConfig
 {
+    /**
+     * Строковое ID приложения.
+     * @var string
+     */
     protected $application = null;
     protected $info = array();
     protected $log_actions = null;
