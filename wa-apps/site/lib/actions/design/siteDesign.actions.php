@@ -12,7 +12,7 @@ class siteDesignActions extends waDesignActions
         'save_panel' => false,
         'js' => array(
             'ace' => false,
-            'editor' => false,
+            'editor' => true,
             'storage' => false
         ),
         'is_ajax' => true
