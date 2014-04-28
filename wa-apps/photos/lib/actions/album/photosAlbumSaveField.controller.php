@@ -33,6 +33,7 @@ class photosAlbumSaveFieldController extends waJsonController
             $album_model->updateById($id, array(
                 $name => $value
             ));
+            $album['not_escaped_name'] = $value;
             $album['name'] = photosPhoto::escape($value);
             $this->response['album'] = $album;
         }
