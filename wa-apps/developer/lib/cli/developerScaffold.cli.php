@@ -42,7 +42,32 @@ class developerScaffoldCli extends waCliController
         $this->createDirectories("wa-plugins/shipping", $dirs);
         
     }
-    
+
+    /**
+     * Создание плагина для приложения. Приложение должно быть установлено.
+     * 
+     * @return
+     */
+    private function AppPlugin()
+    {
+        $plugin_name = trim(waRequest::param(1));
+        
+        if(!$plugin_name) {
+            $this->SystemShippingPluginHelp();
+            return;
+        }
+
+        $application = waRequest::param('app');
+        
+        if(!$application || !waSystem::getInstance()->appExists($application)) {
+            die("Application '$application' not exists.\n");
+        }
+        
+        $this->createDirectories("wa-apps/$application/plugins/$plugin_name", array(
+            "css", "img", "js", "lib", "templates", "lib/actions", "lib/classes",
+            "lib/config", "lib/models", "lib/updates"));
+    }
+
     /**
      * Показ основной помощи
      */
