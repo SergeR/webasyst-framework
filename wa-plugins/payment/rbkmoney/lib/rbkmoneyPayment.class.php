@@ -1,7 +1,10 @@
 <?php
 
 /**
- *
+ * Processing payments with RBKMoney
+ * 
+ * @package wa-plugin/payment
+ * 
  * @property string $shop_id
  * @property string $shop_account
  * @property string $secret_key
