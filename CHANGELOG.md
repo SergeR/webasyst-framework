@@ -2,3 +2,4 @@
 
 * DocBlocks для автоматической генерации [документации](http://webasyst-api.handmadesite.net/)
 * Поля формы контактов с телефоном и e-mail адресом имеют HTML5 тип tel и email
+* Плагин RBKMoney доработан
