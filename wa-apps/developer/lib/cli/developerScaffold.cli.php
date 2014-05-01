@@ -64,8 +64,13 @@ class developerScaffoldCli extends waCliController
         }
         
         $this->createDirectories("wa-apps/$application/plugins/$plugin_name", array(
-            "css", "img", "js", "lib", "templates", "lib/actions", "lib/classes",
-            "lib/config", "lib/models", "lib/updates"));
+            "css", "img", "js", "lib", "templates", "locale",
+            "lib/actions", "lib/classes", "lib/config", "lib/models", "lib/updates"));
+        
+        $this->touchHtaccess(array(
+            "wa-apps/$application/plugins/$plugin_name/lib",
+            "wa-apps/$application/plugins/$plugin_name/templates",
+            "wa-apps/$application/plugins/$plugin_name/locale"));
     }
 
     /**
@@ -99,6 +104,35 @@ class developerScaffoldCli extends waCliController
         
         foreach($directories as $dir) {
             waFiles::create($base_directory . $dir, TRUE);
+        }
+        
+    }
+    
+    /**
+     * Массовое создание .htaccess в указанных директориях
+     * 
+     * @param array|string $dirs Директория или директории в которых надо создать .htaccess
+     * @param string $content Содержимое .htaccess
+     */
+    private function touchHtaccess($dirs, $content="Deny from all\n")
+    {
+        if(!is_array($dirs)) {
+            $dirs = array($dirs);
+        }
+        
+        $root_dir = waSystem::getInstance()->getConfig()->getPath('root');
+        
+        if(substr($root_dir, -1) !== '/') {
+            $root_dir .= "/";
+        }
+        
+        foreach($dirs as $dir) {
+            
+            if(substr($dir, -1) !== '/') {
+                $dir .= "/";
+            }
+            
+            waFiles::write($root_dir . $dir . '.htaccess', $content);        
         }
         
     }
