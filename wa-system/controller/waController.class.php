@@ -40,7 +40,7 @@ abstract class waController
 
     public function getAppId()
     {
-        return $this->getConfig()->getApplication();
+        return $this->getApp();
     }
 
 
