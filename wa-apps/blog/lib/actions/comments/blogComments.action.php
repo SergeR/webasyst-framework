@@ -1,6 +1,6 @@
 <?php
 /**
- * @author WebAsyst Team
+ * @author Webasyst
  * @package wa-apps/blog/actions/comment
  */
 class blogCommentsAction extends waViewAction
