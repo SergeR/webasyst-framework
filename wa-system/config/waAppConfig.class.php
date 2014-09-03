@@ -21,6 +21,7 @@ class waAppConfig extends SystemConfig
     protected $application = null;
     protected $info = array();
     protected $log_actions = null;
+    protected $system_log_actions = null;
     protected $prefix;
     protected $plugins = null;
     protected $themes = null;
@@ -42,6 +43,8 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns app's id.
+     * 
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getApplication
      * @return string
      */
@@ -50,7 +53,7 @@ class waAppConfig extends SystemConfig
         return $this->application;
     }
 
-    public function getLogActions($full = false)
+    public function getLogActions($full = false, $ignore_system = false)
     {
         if ($this->log_actions === null) {
             $path = $this->getAppPath().'/lib/config/logs.php';
@@ -67,45 +70,52 @@ class waAppConfig extends SystemConfig
             } else {
                 $this->log_actions = array();
             }
+        }
+        if (!$ignore_system) {
+            $system_actions = $this->getSystemLogActions();
+            return array_merge($this->log_actions, $system_actions);
+        }
+        return $this->log_actions;
+    }
+
+    public function getSystemLogActions()
+    {
+        if ($this->system_log_actions === null) {
+            $actions = array();
             // add system actions for design and pages
             if (!empty($this->info['themes'])) {
-                $actions = array(
+                $actions = array_merge($actions, array(
                     'template_add' => array(
                         'name' => _ws('added a new template')
-                    ), 
+                    ),
                     'template_edit' => array(
                         'name' => _ws('edited template')
-                    ), 
+                    ),
                     'template_delete' => array(
                         'name' => _ws('deleted template')
                     ),
                     'theme_upload' => array(
                         'name' => _ws('uploaded a new theme')
-                    ), 
+                    ),
                     'theme_download' => array(
                         'name' => _ws('downloaded theme')
-                    ), 
+                    ),
                     'theme_delete' => array(
                         'name' => _ws('deleted theme')
-                    ), 
+                    ),
                     'theme_reset' => array(
                         'name' => _ws('reset theme settings')
-                    ), 
+                    ),
                     'theme_duplicate' => array(
                         'name' => _ws('create theme duplicate')
-                    ), 
+                    ),
                     'theme_rename' => array(
                         'name' => _ws('renamed theme')
-                    ), 
-                );
-                foreach ($actions as $action => $info) {
-                    if (!isset($this->log_actions[$action])) {
-                        $this->log_actions[$action] = $info;
-                    }
-                }
+                    ),
+                ));
             }
             if (!empty($this->info['pages'])) {
-                $actions = array(
+                $actions = array_merge($actions, array(
                     'page_add' => array(
                         'name' => _ws('added a new page')
                     ),
@@ -118,33 +128,29 @@ class waAppConfig extends SystemConfig
                     'page_move' => array(
                         'name' => _ws('moved page')
                     )
-                );
-                foreach ($actions as $action => $info) {
-                    if (!isset($this->log_actions[$action])) {
-                        $this->log_actions[$action] = $info;
-                    }
-                }
+                ));
             }
-            $this->log_actions['login'] = array(
+            $actions['login'] = array(
                 'name' => _ws('logged in')
             );
-            $this->log_actions['logout'] = array(
+            $actions['logout'] = array(
                 'name' => _ws('logged out')
             );
-            $this->log_actions['signup'] = array(
+            $actions['signup'] = array(
                 'name' => _ws('signed up')
             );
-            $this->log_actions['my_profile_edit'] = array(
+            $actions['my_profile_edit'] = array(
                 'name' => _ws('edited profile in customer portal')
             );
-            $this->log_actions['access_disable'] = array(
+            $actions['access_enable'] = array(
                 'name' => _ws('enabled access for contact')
             );
-            $this->log_actions['access_enable'] = array(
+            $actions['access_disable'] = array(
                 'name' => _ws('disabled access for contact')
             );
+            $this->system_log_actions = $actions;
         }
-        return $this->log_actions;
+        return $this->system_log_actions;
     }
 
     protected function configure()
@@ -153,8 +159,11 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns app configuration parameter values.
+     * 
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getOption
-     * @param string $name
+     * 
+     * @param string $name The name of configuration parameter whose value must be returned.
      * @return mixed
      */
     public function getOption($name = null)
@@ -478,8 +487,11 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns path to app's source files directory.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppPath
-     * @param string $path
+     * 
+     * @param unknown_type $path Optional path to a subdirectory inside app's lib/ directory
      * @return string
      */
     public function getAppPath($path = null)
@@ -488,8 +500,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns path to specified configuration file of current app, located in its lib/config/ directory.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppConfigPath
-     * @param string $name
+     * @param string $name Name of configuration file without extension
      * @return string
      */
     public function getAppConfigPath($name)
@@ -498,10 +512,15 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns path to app's configuration file with specified name.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getConfigPath
-     * @param string $name
-     * @param boolean $user_config
-     * @param string $app
+     * @see waSystemConfig::getConfigPath()
+     * @param $name Name of the configuration file whose path must be returned
+     * @param $user_config Whether path to a file located in wa-config/apps/[app_id]/ directory must be returned,
+     *     which is used for storing custom user configuration. If false is specified, method returns path to a file
+     *     located in wa-apps/[app_id]/lib/config/.
+     * @param $app Optional app id, defaults to current app's id
      * @return string
      */
     public function getConfigPath($name, $user_config = true, $app = null)
@@ -540,6 +559,8 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns app's name from its configuration file lib/config/app.php.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getName
      * @return string
      */
@@ -549,9 +570,12 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns information from app's configuration file lib/config/app.php.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getInfo
-     * @param string $name
-     * @return mixed
+     * @param string $name Name of parameter whose value must be returned. If not specified, method returns
+     *     associative array of all parameters contained in configuration file.
+     * @return string|array
      */
     public function getInfo($name = null)
     {
@@ -563,8 +587,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns path to the source files of an app's plugin.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginPath
-     * @param string $plugin_id
+     * @param string $plugin_id Plugin id
      * @return string
      */
     public function getPluginPath($plugin_id)
@@ -573,8 +599,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns information about app's plugin.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginInfo
-     * @param string $plugin_id
+     * @param string $plugin_id Plugin id
      * @return array
      */
     public function getPluginInfo($plugin_id)
@@ -586,6 +614,8 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Returns information about all app's installed plugins as an associative array.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPlugins
      * @return array
      */
@@ -626,6 +656,7 @@ class waAppConfig extends SystemConfig
                         }
                         waSystem::popActivePlugin();
                         $plugin_info['id'] = $plugin_id;
+                        $plugin_info['app_id'] = $this->application;
                         if (isset($plugin_info['img'])) {
                             $plugin_info['img'] = 'wa-apps/'.$this->application.'/plugins/'.$plugin_id.'/'.$plugin_info['img'];
                         }
@@ -684,8 +715,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
+     * Sets or clears the value of app's indicator displayed next to its icon in main backend menu.
+     *
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-setCount
-     * @param int $n
+     * @param mixed Indicator value. If empty value is specified, indicator value is cleared.
      */
     public function setCount($n = null)
     {

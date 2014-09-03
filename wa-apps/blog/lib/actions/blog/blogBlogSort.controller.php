@@ -1,7 +1,8 @@
 <?php
 /**
- * @author WebAsyst Team
+ * @author Webasyst
  * @package wa-apps/blog/actions/blog
+ *
  */
 class blogBlogSortController extends waJsonController
 {

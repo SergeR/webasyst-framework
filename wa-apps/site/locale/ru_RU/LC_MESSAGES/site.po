@@ -12,7 +12,7 @@ msgstr ""
 "%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.6\n"
 "Language: ru_RU\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
@@ -203,7 +203,7 @@ msgstr "Добавить ссылку"
 
 #: /wa-apps/site/templates/actions/settings/Settings.html:125
 msgid "Favicon"
-msgstr "Favicon"
+msgstr "Фавиконка"
 
 #: /wa-apps/site/templates/actions/settings/Settings.html:129
 msgid "Upload another favicon"
@@ -885,8 +885,8 @@ msgstr "Включить формы регистрации и входа для 
 #: /wa-apps/site/templates/actions/settings/Settings.html:152
 msgid "Select the app that will handle authorization forms:"
 msgstr ""
-"Выберите приложение, которое будет отвечать за функционал форм регистрации и "
-"входа для этого сайта:"
+"Выберите приложение, которое будет отвечать за функциональность форм "
+"регистрации и авторизации пользователей на этом сайте:"
 
 msgid "Enable captcha for signup form"
 msgstr "Требовать ввод капчи (captcha) в форме регистрации"
@@ -1282,7 +1282,7 @@ msgstr "ВАЖНО"
 msgid ""
 "The URL entered must point to the root of this Webasyst framework "
 "installation."
-msgstr "Введенный адрес вести на корневую папку установки Webasyst."
+msgstr "Введенный адрес должен указывать на корневую папку установки Webasyst."
 
 #: /wa-apps/site/templates/actions/settings/Settings.html:35
 msgid "Matches domain name"
@@ -1314,6 +1314,9 @@ msgstr "Добро пожаловать на ваш новый сайт!"
 #: /wa-apps/site/themes/nifty/content.html:7
 #: /wa-apps/site/themes/sidebar/content.html:7
 #: /wa-apps/site/themes/vk/content.html:26
+msgid "Start by <a href=\"%s\">creating a page</a> in your site backend."
+msgstr "Начните с <a href=\"%s\">создания страницы</a> в бекенде сайта."
+
 msgid "Start by creating a page in your <a href=\"%s\">site backend</a>."
 msgstr "Начните с создания страницы в <a href=\"%s\">бекенде сайта</a>."
 
@@ -1329,19 +1332,25 @@ msgstr ""
 
 msgid "My profile"
 msgstr "Мой профиль"
+
 #: /wa-apps/site/lib/actions/domains/siteDomainsSave.controller.php:18
-msgid "Website with a domain name %s is already registered in this Webasyst installation. Delete %s website (Site app > Settings > %s) to be able to use it's domain name for another website."
+msgid ""
+"Website with a domain name %s is already registered in this Webasyst "
+"installation. Delete %s website (Site app > Settings > %s) to be able to use "
+"it's domain name for another website."
 msgstr ""
+"Сайт с доменным именем %s уже зарегистрирован в этой установке Вебасиста. "
+"Удалите сайт %s (приложение «Сайт» > %s > Настройки), чтобы подключить этот "
+"домен к другому сайту."
 
 #: /wa-apps/site/lib/actions/frontend/siteFrontendMy.action.php:18
 #: /wa-apps/site/lib/actions/frontend/siteFrontendMy.action.php:28
 msgid "My account"
-msgstr ""
+msgstr "Личный кабинет"
 
 #: /wa-apps/site/themes/default/my.profile.html:8
 msgid "Contact information successfully updated!"
-msgstr ""
-
+msgstr "Контактная информация успешно обновлена!"
 
 #: /wa-apps/site/lib/config/logs.php:5
 msgid "added a new site"
@@ -1386,3 +1395,240 @@ msgstr "отредактировал правило маршрутизации"
 #: /wa-apps/site/lib/config/logs.php:38
 msgid "deleted routing rule"
 msgstr "удалил правило маршрутизации"
+
+#: /wa-apps/site/templates/actions/personal/Personal.html:37
+msgid ""
+"Personal account structure is defined by the list of installed Webasyst apps "
+"linked in the current website frontend."
+msgstr ""
+"Структура личного кабинета определяется списком установленных и подключенных "
+"на данном сайте приложений Webasyst."
+
+#: /wa-apps/site/templates/actions/personal/Personal.html:41
+msgid "Auth & Sign Up settings"
+msgstr "Настройки авторизации"
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:8
+msgid ""
+"This app cannot be enabled for personal accounts on this domain, because the "
+"app is not settled in this domain's routing settings. Add this app to the "
+"routing table first so it becomes published on this site, and then you’ll be "
+"able to link it in personal accounts navigation."
+msgstr ""
+"Это приложение нельзя включить в личном кабинете, так как приложение не "
+"подключено в правилах маршрутизации сайта. Добавьте правило маршрутизации "
+"для этого приложения в настройках структуры сайта, после чего вы сможете "
+"включить его в личном кабинете."
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:9
+msgid "Setup routing"
+msgstr "Настроить маршрутизацию"
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:15
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:7
+msgid "Disabled"
+msgstr "Выключена"
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:19
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:13
+msgid "Enabled"
+msgstr "Включена"
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:26
+msgid ""
+"%s personal account URL: <a href=\"%s\">%s</a> <i class=\"icon10 new-window "
+"top-padded\"></i>"
+msgstr ""
+"«%s» в личном кабинете: <a href=\"%s\">%s</a> <i class=\"icon10 new-window "
+"top-padded\"></i>"
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:31
+msgid "%s personal account is disabled on this site."
+msgstr "Личный кабинет приложения «%s» выключен на этом сайте."
+
+#: /wa-apps/site/templates/actions/personal/PersonalProfile.html:3
+msgid ""
+"Personal account profile URL: <a href=\"%s\">%s</a> <i class=\"icon10 new-"
+"window top-padded\"></i>"
+msgstr ""
+"Настройка профиля в личном кабинете: <a href=\"%s\">%s</a> <i class=\"icon10 "
+"new-window top-padded\"></i>"
+
+#: /wa-apps/site/templates/actions/personal/PersonalProfile.html:5
+msgid "My profile form fields"
+msgstr "Поля формы настройки профиля"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:1
+msgid "Authorization on %s"
+msgstr "Авторизация на %s"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:16
+msgid ""
+"User sign up, authorization and personal accounts are not enabled on %s."
+msgstr ""
+"Регистрация пользователей, авторизация и личный кабинет выключены на сайте "
+"%s."
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:20
+msgid ""
+"User sign up, authorization and personal accounts are enabled on %s. <a id="
+"\"configure-app\" href=\"#\" class=\"inline-link\"><b><i>Configure URLs</i></"
+"b></a>"
+msgstr ""
+"Регистрация пользователей, авторизация и личный кабинет включены на %s. <a "
+"id=\"configure-app\" href=\"#\" class=\"inline-link\"><b><i>Настроить</i></"
+"b></a>"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:22
+msgid ""
+"Select the app that will host authorization forms. The URLs of my profile, "
+"signup and authorization pages will be defined by the selected app routing:"
+msgstr ""
+"Выберите приложение, которое будет отвечать за функциональность форм "
+"регистрации и авторизации пользователей на этом сайте. Адреса страниц "
+"регистрации, входа и личного кабинета будут определяться правилами "
+"маршрутизации выбранного приложения:"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettings.html:46
+msgid "Auth"
+msgstr "Авторизация"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:176
+msgid "Confirm email on sign up"
+msgstr "Подтверждение email-адреса после регистрации"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:177
+msgid "A confirmation link will be sent to user after sign up"
+msgstr ""
+"Ссылка на подтверждение адреса будет отправлена пользователю на указанный им "
+"электронный адрес"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:184
+msgid "Text"
+msgstr "Текст"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:189
+msgid "Variables"
+msgstr "Переменные"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:214
+msgid "Sign up form fields"
+msgstr "Поля формы регистрации"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:231
+msgid "Edit field label"
+msgstr "Редактировать название поля"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:236
+msgid "Edit hint for this field"
+msgstr "Редактировать подсказку к полю"
+
+#: /wa-apps/site/templates/actions/personal/PersonalSettingsSignup.html:244
+msgid "Edit button label"
+msgstr "Редактировать текст на кнопке"
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:152
+msgid "Upload favicon"
+msgstr "Загрузить фавиконку"
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:160
+msgid "from 152x152 and up to 1024x1024 px"
+msgstr "от 152х152 до 1024х1024 пикселей"
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:178
+msgid "Personal &rarr; <a href=\"%s\">Auth &amp; Sign Up settings</a>"
+msgstr "Личный кабинет &rarr; <a href=\"%s\">Настройки авторизации</a>"
+
+#: /wa-apps/site/templates/layouts/Sidebar.html:44
+msgid "Personal"
+msgstr "Личный кабинет"
+
+#: /wa-apps/site/templates/layouts/Sidebar.html:59
+msgid "File manager"
+msgstr "Файл-менеджер"
+
+#: /wa-apps/site/lib/actions/settings/siteSettings.action.php:150
+msgid ""
+"Touch icon you upload here will not take effect for you website %s because "
+"your website is set for a subfolder on a domain. Touch icon uploaded using "
+"the form above will be set only for websites set from the domain root folder."
+msgstr ""
+"Изображение, загруженное с помощью этой формы, не будет использовано на "
+"сайте %s, потому что сайт расположен в подкаталоге домена. Загруженная через "
+"данную форму иконка может быть установлена только для сайтов, размещенных в "
+"корневом каталоге домена."
+
+#: /wa-apps/site/lib/actions/settings/siteSettings.action.php:159
+msgid ""
+"File apple-touch-icon.png exists in the Webasyst framework installation "
+"folder. The touch icon you upload here will be overridden by the icon "
+"uploaded as file unless you delete this file."
+msgstr ""
+"Файл apple-touch-icon.png обнаружен в каталоге установки Webasyst. Вместо "
+"иконки, сохраненной на этой странице, будет отображаться иконка из "
+"указанного файла."
+
+#: /wa-apps/site/lib/actions/settings/siteSettingsSave.controller.php:213
+msgid "Files with extension *.png are allowed only."
+msgstr "Разрешена загрузка только PNG-файлов."
+
+#: /wa-apps/site/themes/default/my.profile.html:56
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: /wa-apps/site/themes/default/my.profile.html:69
+msgid "Delete photo"
+msgstr "Удалить фото"
+
+#: /wa-apps/site/themes/default/signup.html:3
+msgid "You successfully confirmed email."
+msgstr "Вы успешно подтвердили ваш email-адрес."
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:157
+msgid "Touch icon for iOS"
+msgstr "Фавиконка для iOS"
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:160
+msgid "Upload iOS touch icon"
+msgstr "Загрузить iOS-фавиконку"
+
+#: /wa-apps/site/templates/actions/personal/Personal.html:41
+msgid "Auth &amp; Sign Up settings"
+msgstr "Настройки авторизации"
+
+#: /wa-apps/site/templates/actions/settings/Settings.html:178
+msgid "Personal &rarr; <a href=\"%s\">Auth &amp; Sign Up</a>"
+msgstr "Личный кабинет &rarr; <a href=\"%s\">Настройки авторизации</a>"
+
+#: /wa-apps/site/templates/actions/personal/PersonalProfile.html:5
+msgid ""
+"My profile page is not available on this site, because user authorization on "
+"this site is hosted by <strong>%s</strong> app, while it’s personal account "
+"functionality is disabled. Either enable <a href=\"#/personal/app/%s/\">%s "
+"app’s personal account</a> on this site, or change the app that hosts user "
+"authorization in <a href=\"%s\">Auth &amp; Sign Up</a> settings."
+msgstr ""
+"Страница управления профилем на этом сайте недоступна, так как личный "
+"кабинет приложения «<strong>%s</strong>», отвечающего за функциональность "
+"форм регистрации и авторизации на этом сайте, отключен. Для включения "
+"страницы управления профилем необходимо либо включить <a href=\"#/personal/"
+"app/%s/\">личный кабинет приложения «%s»</a>, либо <a href=\"%s\">в "
+"настройках авторизации</a> выбрать другое приложения, которое будет отвечать "
+"за функциональность форм регистрации и авторизации на этом сайте."
+
+#: /wa-apps/site/lib/actions/routing/siteRoutingSave.controller.php:114
+msgid ""
+"The URL %s is already used by %s app. If you proceed, this will replace %s "
+"app with %s app on this URL."
+msgstr ""
+"Адрес %s уже используется приложением «%s». Сохранив изменения, поселение "
+"приложения «%s» по этому адресу будет полностью заменено поселением "
+"приложения «%s»."
+
+#: /wa-apps/site/templates/actions/personal/PersonalApp.html:26
+msgid ""
+"%s personal account URL: <a id=\"s-app-frontend-link\" href=\"%s\" target="
+"\"_blank\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+msgstr ""
+"«%s» в личном кабинете: <a id=\"s-app-frontend-link\" href=\"%s\" target="
+"\"_blank\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
