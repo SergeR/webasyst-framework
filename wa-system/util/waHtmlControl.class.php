@@ -4,6 +4,7 @@
  *
  * @author Webasyst
  * @package wa-system/util
+ *
  */
 class waHtmlControl
 {

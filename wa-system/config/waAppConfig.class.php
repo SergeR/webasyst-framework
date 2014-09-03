@@ -43,9 +43,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getApplication
      * Returns app's id.
-     *
+     * 
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getApplication
      * @return string
      */
     public function getApplication()
@@ -159,10 +159,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getOption
-     * @param string $name
      * Returns app configuration parameter values.
-     *
+     * 
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getOption
+     * 
      * @param string $name The name of configuration parameter whose value must be returned.
      * @return mixed
      */
@@ -487,10 +487,10 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppPath
-     * @param string $path
      * Returns path to app's source files directory.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppPath
+     * 
      * @param unknown_type $path Optional path to a subdirectory inside app's lib/ directory
      * @return string
      */
@@ -500,10 +500,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppConfigPath
-     * @param string $name
      * Returns path to specified configuration file of current app, located in its lib/config/ directory.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getAppConfigPath
      * @param string $name Name of configuration file without extension
      * @return string
      */
@@ -513,12 +512,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getConfigPath
-     * @param string $name
-     * @param boolean $user_config
-     * @param string $app
      * Returns path to app's configuration file with specified name.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getConfigPath
      * @see waSystemConfig::getConfigPath()
      * @param $name Name of the configuration file whose path must be returned
      * @param $user_config Whether path to a file located in wa-config/apps/[app_id]/ directory must be returned,
@@ -563,9 +559,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getName
      * Returns app's name from its configuration file lib/config/app.php.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getName
      * @return string
      */
     public function getName()
@@ -574,11 +570,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getInfo
-     * @param string $name
-     * @return mixed
      * Returns information from app's configuration file lib/config/app.php.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getInfo
      * @param string $name Name of parameter whose value must be returned. If not specified, method returns
      *     associative array of all parameters contained in configuration file.
      * @return string|array
@@ -593,10 +587,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginPath
-     * @param string $plugin_id
      * Returns path to the source files of an app's plugin.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginPath
      * @param string $plugin_id Plugin id
      * @return string
      */
@@ -606,10 +599,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginInfo
-     * @param string $plugin_id
      * Returns information about app's plugin.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPluginInfo
      * @param string $plugin_id Plugin id
      * @return array
      */
@@ -622,9 +614,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPlugins
      * Returns information about all app's installed plugins as an associative array.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-getPlugins
      * @return array
      */
     public function getPlugins()
@@ -723,10 +715,9 @@ class waAppConfig extends SystemConfig
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-setCount
-     * @param int $n
      * Sets or clears the value of app's indicator displayed next to its icon in main backend menu.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waAppConfig/#method-setCount
      * @param mixed Indicator value. If empty value is specified, indicator value is cleared.
      */
     public function setCount($n = null)

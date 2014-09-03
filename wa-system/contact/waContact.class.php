@@ -74,9 +74,9 @@ class waContact implements ArrayAccess
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getId
      * Returns contact's numeric id.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getId
      * @return int
      */
     public function getId()
@@ -85,9 +85,9 @@ class waContact implements ArrayAccess
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getName
      * Returns the value of contact's name property.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getName
      * @return string
      */
     public function getName()
@@ -96,12 +96,9 @@ class waContact implements ArrayAccess
     }
 
     /**
-     * @param int $width
-     * @param int $height
-     * @return string
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPhoto
      * Returns contact's photo URL.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPhoto
      * @param int|string|null $width Image width. Arbitrary integer value, or string value 'original', which requires
      *     that method must return the URL of the original image originally uploaded from a user's computer. Defaults to 96.
      * @param int|string|null $height Image height (integer). If not specified, the integer value specified for the
@@ -116,6 +113,7 @@ class waContact implements ArrayAccess
     /**
      * Returns the photo URL of the specified contact.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPhotoUrl
      * @param $id Contact id
      * @param $ts Contact photo id stored in contact's 'photo' property. If not specified, the URL of the default
      *     userpic is returned.
@@ -175,12 +173,9 @@ class waContact implements ArrayAccess
     }
 
     /**
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setPhoto
-     * @param string $file
-     * @return string
-     * @throws waException
      * Adds an image to contact.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setPhoto
      * @param string $file Path to image file
      * @throws waException
      * @return string
@@ -214,7 +209,6 @@ class waContact implements ArrayAccess
     /**
      * Deletes current contact.
      *
-     * @return boolean result
      * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-delete
      * @return bool Whether contact was deleted successfully
      */
@@ -230,6 +224,7 @@ class waContact implements ArrayAccess
     /**
      * Returns the value of a contact's property.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-get
      * @param string $field_id Contact property id:
      *     - field name from wa_contact table
      *     - 'email'
@@ -255,7 +250,6 @@ class waContact implements ArrayAccess
      *       well as other elements specific to various contact properties.
      *
      * @return mixed
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-get
      */
     public function get($field_id, $format = null)
     {
@@ -422,6 +416,7 @@ class waContact implements ArrayAccess
     /**
      * Returns the first value of a contact's multi-field.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getFirst
      * @param string $field_id Contact property id
      * @return mixed
      */
@@ -451,6 +446,7 @@ class waContact implements ArrayAccess
     /**
      * Returns full information about contact, which is stored in cache.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-load
      * @param unknown_type $format Data format
      * @see self::get()
      * @param unknown_type $all Flag requiring to return the values of fields marked as hidden in file
@@ -509,6 +505,7 @@ class waContact implements ArrayAccess
     /**
      * Validates specified values of contact properties.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-validate
      * @param array $data Associative array of contact property values.
      * @return int|array Zero, if no errors were found in provided data, or array of error messages otherwise
      */
@@ -556,6 +553,7 @@ class waContact implements ArrayAccess
     /**
      * Saves contact's data to database.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-save
      * @param array $data Associative array of contact property values.
      * @param bool $validate Flag requiring to validate property values. Defaults to false.
      * @return int|array Zero, if saved successfully, or array of error messages otherwise
@@ -724,6 +722,7 @@ class waContact implements ArrayAccess
     /**
      * Returns contact's locale id.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getLocale
      * @return string
      */
     public function getLocale()
@@ -759,6 +758,7 @@ class waContact implements ArrayAccess
     /**
      * Returns contact's time zone value.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getTimezone
      * @return string
      */
     public function getTimezone()
@@ -773,6 +773,7 @@ class waContact implements ArrayAccess
     /**
      * Returns the value of a contact's property stored in cache, without accessing the database.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getCache
      * @param string $field_id Contact property id. If not specified, information about all properties of a contact is returned.
      * @param mixed $old_value Flag requiring to return only contact property values retrieved from the database and to
      *         ignore dynamically added ones. If not specified, false is used by default: return both values stored in
@@ -876,6 +877,7 @@ class waContact implements ArrayAccess
     /**
      * Returns the properties of a cointact relating to specified app.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getSettings
      * @param string|null $app_id App id
      * @param string|null $name Id of the contact property associated with the specified app which must be returned. If
      *      not specified, an associative array of all properties of a contact is returned, which are associated with
@@ -907,6 +909,7 @@ class waContact implements ArrayAccess
     /**
      * Saves properties of specified contact to database.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setSettings
      * @param string $app_id Id of the app for which a value of a contact property must be set
      * @param string $name Contact property id
      * @param mixed $value Contact property value
@@ -924,6 +927,7 @@ class waContact implements ArrayAccess
     /**
      * Deletes contact's property relating to specified app.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-delSettings
      * @param string $app_id App id
      * @param string $name Contact property id
      */
@@ -937,6 +941,7 @@ class waContact implements ArrayAccess
     /**
      * Returns information about a contact's access rights configuration.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getRights
      * @param string $app_id Id of the app for which contact's access rights configuration must be returned.
      * @param string $name String id of the access rights element available for the specified app. If not specified,
      *     all values of access rights for the current contact are returned. If % character is appended to the access
@@ -988,6 +993,7 @@ class waContact implements ArrayAccess
      * Returns information about whether a user has full (adminstrative) access rights to all installed apps or only one
      * specified app.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-isAdmin
      * @param string $app_id App id. If not specified, access rights for all installed apps are verified.
      * @return bool
      */
@@ -1006,6 +1012,7 @@ class waContact implements ArrayAccess
      * If a user has administrative access rights for the specified app, then an attempt to change his access rights
      * configuration using this method is ignored.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-setRight
      * @param string $app_id Id of the app for which contact's access rights must be set
      * @param string $name Access rights element id supported by specified app
      * @param int $value Access rights value
@@ -1020,9 +1027,11 @@ class waContact implements ArrayAccess
         return true;
     }
 
+
     /**
      * Returns user's status: "online", "offline"
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getStatus
      * @return string
      */
     public function getStatus()
@@ -1060,9 +1069,11 @@ class waContact implements ArrayAccess
         return $this->get($offset);
     }
 
+
     /**
      * Adds an extra value to specified contact property.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-add
      * @param string $field Contact property id
      * @param mixed $value Property value
      */
@@ -1087,9 +1098,9 @@ class waContact implements ArrayAccess
      * contains information about user-defined function wa_password_hash(), then that function is used for generating
      * password hash instead of md5().
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPasswordHash
      * @param string $password Password string
      * @return string
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getPasswordHash
      */
     public static function getPasswordHash($password)
     {
@@ -1103,9 +1114,9 @@ class waContact implements ArrayAccess
     /**
      * Adds contact to a category.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-addToCategory
      * @param int|string $category_id Category's simple numeric or system string key (app_id)
      * @throws waException
-     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-addToCategory
      */
     public function addToCategory($category_id)
     {
@@ -1126,6 +1137,7 @@ class waContact implements ArrayAccess
     /**
      * Sets a value for specified contact property.
      *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-set
      * @param string $field_id Contact property id
      * @param mixed $value Property value
      * @param bool $add Flag requiring to add specified value to existing values of a multi-field. If false,
@@ -1169,9 +1181,9 @@ class waContact implements ArrayAccess
         $this->data[$offset] = null;
     }
 
+
     /**
-     * Returns current data and time relative to contact's locale and time zone configuration.
-     *
+     * @see http://www.webasyst.ru/developers/docs/basics/classes/waContact/#method-getTime
      * @return string
      */
     public function getTime()

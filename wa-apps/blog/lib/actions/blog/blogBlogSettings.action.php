@@ -2,6 +2,7 @@
 /**
  * @author Webasyst
  * @package wa-apps/blog/actions/blog
+ *
  */
 class blogBlogSettingsAction extends waViewAction
 {

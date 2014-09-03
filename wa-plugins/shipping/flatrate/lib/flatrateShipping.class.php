@@ -6,8 +6,9 @@
  * @property-read float $cost
  * @property-read string $currency
  * @property-read string $delivery
- * @property-read string $prompt_address
+ * @property-read bool $prompt_address
  * @package wa-plugin/shipping
+ *
  */
 class flatrateShipping extends waShipping
 {
