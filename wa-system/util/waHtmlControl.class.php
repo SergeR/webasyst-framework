@@ -2,8 +2,9 @@
 
 /**
  *
- * @author WebAsyst Team
+ * @author Webasyst
  * @package wa-system/util
+ *
  */
 class waHtmlControl
 {
