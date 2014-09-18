@@ -25,6 +25,13 @@ abstract class waCacheAdapter
     {
     }
 
+    /**
+     * 
+     * @param string $key
+     * @param string $app_id
+     * @param string|bool $group
+     * @return string
+     */
     public function key($key, $app_id, $group = null)
     {
         $key = trim($key, '/');
