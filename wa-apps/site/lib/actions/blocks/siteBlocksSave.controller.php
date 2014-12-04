@@ -22,7 +22,7 @@ class siteBlocksSaveController extends waJsonController
         if ($id) {
             try {
                 $model->updateById($id, $info);
-                $this->log('block_edit');
+                $this->logAction('block_edit');
                 if ($id != $info['id']) {
                     $info['old_id'] = $id;
                 }
@@ -39,7 +39,7 @@ class siteBlocksSaveController extends waJsonController
         } else {
             try {
                 $model->add($info);
-                $this->log('block_add');
+                $this->logAction('block_add');
                 $this->response($info);
             } catch (Exception $e) {
                 if ($model->getById($info['id'])) {

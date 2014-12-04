@@ -106,7 +106,7 @@ class photosFrontendCollectionViewAction extends photosFrontendViewAction
     }
     
     // redefine in descendants classes
-    protected function workupPhotos($photos)
+    protected function workupPhotos(&$photos)
     {
         
     }

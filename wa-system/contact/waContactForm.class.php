@@ -391,6 +391,7 @@ class waContactForm
             $result .= "\n" . $this->html($fid, $with_errors);
             $result .= "\n</div></div>";
         }
+        $result .= '<input type="hidden" name="_csrf" value="'.waRequest::cookie('_csrf', '').'" />';
         return $result;
     }
 
