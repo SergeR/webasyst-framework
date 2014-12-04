@@ -150,7 +150,7 @@ class waSystem
      * If not overridden in individual app configuration, instance of class waSmarty3View is used.
      *
      * @param  array  $options  Array of parameters for initialization of the template engine class instance.
-     * @return  resource
+     * @return waSmarty3View|waView
      */
     public function getView($options = array())
     {
@@ -425,7 +425,10 @@ class waSystem
                     throw new waException("Page not found", 404);
                 }
             } elseif (!strncmp($this->config->getRequestUrl(true), 'oauth.php', 9)) {
-                $app_id = $this->getStorage()->get('auth_app', 'webasyst');
+                $app_id = $this->getStorage()->get('auth_app');
+                if ($app_id && !$this->appExists($app_id)) {
+                    throw new waException("Page not found", 404);
+                }
                 $app_system = self::getInstance($app_id);
                 if (class_exists($app_id.'OAuthController')) {
                     $app_system->getFrontController()->execute(null, 'OAuth');
@@ -502,6 +505,7 @@ class waSystem
                 }
 
                 $app_system = self::getInstance($app, null, true);
+
                 if ($app != 'webasyst' && $this->getEnv() == 'backend' && !$this->getUser()->getRights($app_system->getConfig()->getApplication(), 'backend')) {
                     //$this->getResponse()->redirect($this->getConfig()->getBackendUrl(true), 302);
                     throw new waRightsException('Access to this app denied', 403);
@@ -513,8 +517,10 @@ class waSystem
                     }
                     $app_system->login();
                 } else {
-
-
+                    if (waRequest::param('secure') && $app_system->getConfig()->getInfo('csrf') &&
+                        waRequest::method() == 'post' && waRequest::post('_csrf') != waRequest::cookie('_csrf')) {
+                        throw new waException('CSRF Protection', 403);
+                    }
                     $app_system->getFrontController()->dispatch();
                 }
             }
@@ -895,7 +901,8 @@ class waSystem
                 }
                 $apps[] = array(
                     'url' => $path.'/'.$url,
-                    'name' => $escape ? htmlspecialchars($name) : $name
+                    'name' => $escape ? htmlspecialchars($name) : $name,
+                    'app' => $r['app']
                 );
             }
         }

@@ -23,7 +23,7 @@ class blogTagPlugin extends blogPlugin
                     if ($tags = $tag_model->getByField('name',$tag,'id')) {
 
                         $result['join']['blog_post_tag'] = array(
-                        	'condition'=>'blog_post_tag.post_id = blog_post.id',
+                            'condition'=>'blog_post_tag.post_id = blog_post.id',
                         );
                         $result['where'] = array('blog_post_tag.tag_id IN ('.implode(', ',array_keys($tags)).')');
                     } else {
@@ -77,7 +77,7 @@ HTML;
             }
             $output['sidebar'] .= '</div>';
         }
-        return $output;
+        return ifempty($output, null);
     }
 
 
@@ -113,7 +113,7 @@ HTML;
                     $tag['link'] = $url.'blog/?search=tag&amp;tag='.urlencode($tag['name']);
                 }
                 unset($tag);
-                
+
                 foreach ($post_tags as $id=>$post_item_tags) {
                     $html = "";
                     $tag_html = array();
@@ -173,7 +173,7 @@ HTML;
     {
         $output = array();
         $action = new blogTagPluginBackendEditAction(array(
-        	'post_id' => $post['id']
+            'post_id' => $post['id']
         ));
         $output['sidebar'] = $action->display(false);
         return $output;
@@ -183,13 +183,15 @@ HTML;
     public function postSave($post)
     {
         $post_id = $post['id'];
-        if (isset($post['plugin']) && isset($post['plugin'][$this->id]) && $post['plugin'][$this->id]) {
-            $tags = preg_split('/(,[\s]*)+/', $post['plugin'][$this->id]);
-        } else {
-            $tags = array();
+        if (isset($post['plugin']) && isset($post['plugin'][$this->id])) {
+            if ($post['plugin'][$this->id]) {
+                $tags = preg_split('/(,[\s]*)+/', $post['plugin'][$this->id]);
+            } else {
+                $tags = array();
+            }
+            $tag_model = new blogTagPluginModel();
+            $tag_model->addTag($post_id, $tags);
         }
-        $tag_model = new blogTagPluginModel();
-        $tag_model->addTag($post_id, $tags);
     }
 
     public function postDelete($post_ids)

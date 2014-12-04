@@ -90,7 +90,7 @@ class waPlugin
             foreach ($files as $t => $file) {
                 try {
                     if (!$ignore_all) {
-                        include($file);
+                        $this->includeUpdate($file);
                         waFiles::delete($cache_database_dir);
                         $app_settings_model->set(array($this->app_id, $this->id), 'update_time', $t);
                     }
@@ -113,6 +113,14 @@ class waPlugin
             }
             $app_settings_model->set(array($this->app_id, $this->id), 'update_time', $t);
         }
+    }
+
+    /**
+     * @param string $file
+     */
+    private function includeUpdate($file)
+    {
+        include($file);
     }
 
     protected function install()
