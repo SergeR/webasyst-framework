@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsDeleteFromController extends waJsonController
 {
     public function execute() 

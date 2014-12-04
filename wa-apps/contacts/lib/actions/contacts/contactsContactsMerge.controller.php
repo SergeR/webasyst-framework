@@ -1,6 +1,10 @@
 <?php
 
-/** Merge contacts. */
+/**
+ * Merge contacts.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsMergeController extends waJsonController
 {
     public function execute()

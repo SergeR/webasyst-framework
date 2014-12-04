@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsGroupsAddAction extends waViewAction
 {
     public function execute() 

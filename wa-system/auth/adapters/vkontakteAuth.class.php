@@ -1,6 +1,7 @@
 <?php
 /**
  * @see http://vk.com/dev/auth_sites
+ * @package wa-system/Auth/Adapters
  */
 class vkontakteAuth extends waOAuth2Adapter
 {

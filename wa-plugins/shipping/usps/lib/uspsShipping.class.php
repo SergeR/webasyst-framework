@@ -17,7 +17,7 @@
  * @property string $zip
  * @property string $phone
  * @property string $po_zip
- * @package wa-plugin/shipping
+ * @package wa-plugins/shipping/usps
  */
 class uspsShipping extends waShipping
 {

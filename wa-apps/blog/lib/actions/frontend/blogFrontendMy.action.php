@@ -2,6 +2,8 @@
 /**
  * User profile form in customer account, and submit controller for it.
  * Controller for my.profile.html in themes.
+ * 
+ * @package wa-apps/blog/actions/frontend
  */
 class blogFrontendMyAction extends waMyProfileAction
 {

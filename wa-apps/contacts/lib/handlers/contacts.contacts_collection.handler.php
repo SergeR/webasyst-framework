@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsContactsContacts_collectionHandler extends waEventHandler
 {
     public function execute(&$params)

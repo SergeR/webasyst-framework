@@ -1,6 +1,10 @@
 <?php
 
-/** Dialog to add a set of selected contacts to one or more categories. */
+/**
+ * Dialog to add a set of selected contacts to one or more categories.
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesAddAction extends waViewAction
 {
     public function execute() {

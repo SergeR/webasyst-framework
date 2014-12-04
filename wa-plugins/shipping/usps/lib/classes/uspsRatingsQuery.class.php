@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 
+ * @package wa-plugins/shipping/usps
+ */
 class uspsRatingsQuery extends uspsQuery
 {
     private $api;

@@ -5,6 +5,8 @@
  *
  * Generate a single-ply Express Mail shipping label complete
  * with return and delivery addresses, a barcode, and a mailing record for your use.
+ * 
+ * @package wa-plugins/shipping/usps
  */
 class uspsLabelsExpressMailQuery extends uspsLabelsQuery
 {

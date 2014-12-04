@@ -1,6 +1,10 @@
 <?php
 
-/** Delete a contacts category */
+/**
+ * Delete a contacts category
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesDeleteFromController extends waJsonController
 {
     public function execute()

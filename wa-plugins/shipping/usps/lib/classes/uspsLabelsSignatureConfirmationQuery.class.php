@@ -7,7 +7,8 @@
  * as well as attempted deliveries, forwarding, and returns.
  * Signature Confirmation service is not available to APO/FPO addresses, foreign countries, or
  * most U.S. territories.
- *
+ * 
+ * @package wa-plugins/shipping/usps
  */
 class uspsLabelsSignatureConfirmationQuery extends uspsLabelsQuery
 {

@@ -5,6 +5,8 @@
  * along with the form to select marter contact for all other to merge into.
  *
  * Information is collected from all applications using 'links' event.
+ * 
+ * @package wa-apps/contacts
  */
 class contactsContactsMergeSelectMasterAction extends waViewAction
 {

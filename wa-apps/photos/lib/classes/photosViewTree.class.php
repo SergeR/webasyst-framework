@@ -53,6 +53,9 @@ class photosViewTree
     }
 }
 
+/**
+ * @package wa-apps/photos
+ */
 class photosViewTreeElement
 {
     /**
