@@ -215,6 +215,7 @@ class waAutoload
 
         'waFiles'                  => 'file/waFiles.class.php',
         'waTheme'                  => 'file/waTheme.class.php',
+        'waRecursivePhpFilterIterator' => 'file/waRecursivePhpFilterIterator.class.php',
 
         'waLayout'                 => 'layout/waLayout.class.php',
 
