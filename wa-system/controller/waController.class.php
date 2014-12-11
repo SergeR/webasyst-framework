@@ -33,6 +33,14 @@ abstract class waController
         return waSystem::getInstance()->getUser();
     }
 
+    /**
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->getUser()->getId();
+    }
+
     public function getApp()
     {
         return $this->getConfig()->getApplication();

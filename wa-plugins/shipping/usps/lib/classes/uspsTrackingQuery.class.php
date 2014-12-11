@@ -1,5 +1,8 @@
  <?php
-
+/**
+ * 
+ * @package wa-plugins/shipping/usps
+ */
 class uspsTrackingQuery extends uspsQuery
 {
     public function __construct(uspsShipping $plugin, array $params) {

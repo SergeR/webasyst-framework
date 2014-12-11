@@ -5,6 +5,8 @@
  * along with the form to select marter contact for all other to merge into.
  *
  * Information is collected from all applications using 'links' event.
+ * 
+ * @package wa-apps/contacts
  */
 class contactsContactsMergeSelectMasterAction extends waViewAction
 {
@@ -12,13 +14,17 @@ class contactsContactsMergeSelectMasterAction extends waViewAction
     {
         // only allowed to admin
         if ($this->getRights('backend') <= 1) {
-            throw new waRightsException('Access denied.');
+            throw new waRightsException(_w('Access denied'));
         }
 
         $ids = waRequest::request('ids', array(), 'array_int');
         $collection =  new contactsCollection('id/'.implode(',', $ids));
         $collection->orderBy('~data', 'DESC');
         $contacts = $collection->getContacts('*,photo_url_96', 0, 500);
+        foreach ($contacts as &$c) {
+            $c['name'] = waContactNameField::formatName($c);
+        }
+        unset($c);
 
         // Field names
         $fields = array(); // field id => field name
@@ -95,6 +101,18 @@ class contactsContactsMergeSelectMasterAction extends waViewAction
             } else if (empty($c['master_only'])) {
                 $slave_ids[] = $c['id'];
             }
+            
+            $author = array(
+                'name' => ''
+            );
+            if ($c['create_contact_id']) {
+                $author_contact = new waContact($c['create_contact_id']);
+                if ($author_contact->exists()) {
+                    $author = $author_contact;
+                }
+            }
+            $c['author'] = $author;
+            
         }
         unset($c);
 

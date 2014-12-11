@@ -1,4 +1,16 @@
 <?php
+/**
+ * This file is part of Webasyst framework.
+ *
+ * Licensed under the terms of the GNU Lesser General Public License (LGPL).
+ * http://www.webasyst.com/framework/license/
+ *
+ * @link http://www.webasyst.com/
+ * @author Webasyst LLC
+ * @copyright 2011 Webasyst LLC
+ * @package wa-system/Cache/Adapter
+ * @license http://www.webasyst.com/framework/license/ LGPL
+ */
 
 class waMemcachedCacheAdapter extends waCacheAdapter
 {
@@ -10,7 +22,15 @@ class waMemcachedCacheAdapter extends waCacheAdapter
     protected function init()
     {
         if (!self::$memcached) {
-            self::$memcached = new Memcached('wa');
+            if (!empty($this->options['persistent'])) {
+                self::$memcached = new Memcached($this->options['persistent']);
+                // if servers already exists
+                if (self::$memcached->getServerList()) {
+                    return;
+                }
+            } else {
+                self::$memcached = new Memcached();
+            }
             if (empty($this->options['servers'])) {
                 self::$memcached->addServer('127.0.0.1', 11211);
             } else {

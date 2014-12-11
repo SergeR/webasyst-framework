@@ -6,6 +6,8 @@
  * Generate USPS Tracking barcoded labels for
  * Priority Mail®, First-Class Mail® parcels, and package services parcels,
  * including Standard Post™, Media Mail®, and Library Mail.
+ * 
+ * @package wa-plugins/shipping/usps
  */
 class uspsLabelsUspsTrackingQuery extends uspsLabelsQuery
 {

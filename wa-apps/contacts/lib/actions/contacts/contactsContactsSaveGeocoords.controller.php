@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @package wa-apps/contacts
+ * 
+ */
 class contactsContactsSaveGeocoordsController extends waJsonController
 {
     public function execute()

@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 
+ * @package wa-plugins/shipping/usps
+ */
 class uspsServices
 {
     const TYPE_DOMESTIC = 'Domestic';

@@ -1,13 +1,17 @@
 <?php
 
-/** Delete a contacts category */
+/**
+ * Delete a contacts category
+ * 
+ * @package wa-apps/contacts
+ */
 class contactsCategoriesDeleteFromController extends waJsonController
 {
     public function execute()
     {
         // only allowed to global admin
         if (!wa()->getUser()->getRights('webasyst', 'backend')) {
-            throw new waRightsException('Access denied.');
+            throw new waRightsException(_w('Access denied'));
         }
 
         $contacts = waRequest::post('contacts', array(), 'array_int');

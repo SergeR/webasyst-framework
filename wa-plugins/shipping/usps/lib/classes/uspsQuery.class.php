@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @abstract
+ * @package wa-plugins/shipping/usps
+ */
 abstract class uspsQuery
 {
     /**

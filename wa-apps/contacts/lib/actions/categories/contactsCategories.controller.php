@@ -21,7 +21,7 @@ class contactsCategoriesController extends waJsonController
     
     protected function removeFromCategory() {
         $contacts = waRequest::post('contacts', array(), 'array_int');
-        $categories = waRequest::post('categories', array(), 'array_int');
+        $categories = $this->getCategories();
         
         if (!$contacts || !$categories) {
             return;
@@ -40,7 +40,7 @@ class contactsCategoriesController extends waJsonController
     protected function addToCategory()
     {
         $contacts = waRequest::post('contacts', array(), 'array_int');
-        $categories = waRequest::post('categories', array(), 'array_int');
+        $categories = $this->getCategories();
 
         $ccm = new waContactCategoriesModel();
         $ccm->add($contacts, $categories);
@@ -56,6 +56,16 @@ class contactsCategoriesController extends waJsonController
         $this->response['message'] .= ' ';
         $this->response['message'] .= sprintf(_w("to %d category", "to %d categories", $categories), $categories);
     }
+    
+    protected function getCategories()
+    {
+        $categories = waRequest::post('categories', array(), 'array_int');
+        $cm = new waContactCategoryModel();
+        return $cm->select('id')
+            ->where("system_id IS NULL AND id IN(".implode(',', $categories).")")
+            ->fetchAll(null, true);
+    }
+    
 }
 
 // EOF

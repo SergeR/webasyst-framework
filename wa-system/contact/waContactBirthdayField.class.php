@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @package wa-system/Contact
+ * 
+ */
 class waContactBirthdayField extends waContactField
 {
 

@@ -1,4 +1,16 @@
 <?php
+/**
+ * This file is part of Webasyst framework.
+ *
+ * Licensed under the terms of the GNU Lesser General Public License (LGPL).
+ * http://www.webasyst.com/framework/license/
+ *
+ * @link http://www.webasyst.com/
+ * @author Webasyst LLC
+ * @copyright 2011 Webasyst LLC
+ * @package wa-system/Cache/Adapter
+ * @license http://www.webasyst.com/framework/license/ LGPL
+ */
 
 abstract class waCacheAdapter
 {
@@ -13,6 +25,13 @@ abstract class waCacheAdapter
     {
     }
 
+    /**
+     * 
+     * @param string $key
+     * @param string $app_id
+     * @param string|bool $group
+     * @return string
+     */
     public function key($key, $app_id, $group = null)
     {
         $key = trim($key, '/');

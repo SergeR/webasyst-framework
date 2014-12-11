@@ -4,6 +4,8 @@
  * Generate Express Mail International®, Priority Mail International®,
  * First-Class Mail International®, or First-Class Package International Service shipping labels
  * complete with addresses, barcode, customs form, and mailing receipt.
+ * 
+ * @package wa-plugins/shipping/usps
  */
 
 class uspsLabelsInternationalShippingQuery extends uspsLabelsQuery

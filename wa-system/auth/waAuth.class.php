@@ -17,6 +17,9 @@ class waAuth implements waiAuth
         'cookie_expire' => 2592000,
     );
 
+    /**
+     * @param array $options
+     */
     public function __construct($options = array())
     {
         if (is_array($options)) {
@@ -63,6 +66,10 @@ class waAuth implements waiAuth
         return $result;
     }
 
+    /**
+     * @return array|bool|null
+     * @throws waException
+     */
     public function isAuth()
     {
         $info = waSystem::getInstance()->getStorage()->read('auth_user');
@@ -79,21 +86,40 @@ class waAuth implements waiAuth
         return false;
     }
 
+    /**
+     * @param string $email
+     * @return array
+     */
+    protected function getByEmail($email)
+    {
+        $model = new waContactModel();
+        $sql = "SELECT c.* FROM wa_contact c
+                JOIN wa_contact_emails e ON c.id = e.contact_id
+                WHERE ".($this->options['is_user'] ? "c.is_user = 1 AND " : "")."e.email LIKE s:email AND e.sort = 0 AND c.password != ''
+                ORDER BY c.id LIMIT 1";
+        return $model->query($sql, array('email' => $email))->fetch();
+    }
+
+    /**
+     * @param string $login
+     * @return array
+     * @throws waException
+     */
     public function getByLogin($login)
     {
         $result = array();
         $model = new waContactModel();
         if ($this->options['login'] == 'login') {
             $result = $model->getByField('login', $login);
+            if (!$result) {
+                $result = $this->getByEmail($login);
+            }
         } elseif ($this->options['login'] == 'email') {
-            if (strpos($login, '@') === false) {
+            if (strpos($login, '@') !== false) {
+                $result = $this->getByEmail($login);
+            }
+            if (!$result) {
                 $result = $model->getByField('login', $login);
-            } else {
-                $sql = "SELECT c.* FROM wa_contact c
-                JOIN wa_contact_emails e ON c.id = e.contact_id
-                WHERE ".($this->options['is_user'] ? "c.is_user = 1 AND " : "")."e.email LIKE s:email AND e.sort = 0 AND c.password != ''
-                ORDER BY c.id LIMIT 1";
-                $result = $model->query($sql, array('email' => $login))->fetch();
             }
         }
         if ($result) {
@@ -102,6 +128,10 @@ class waAuth implements waiAuth
         return $result;
     }
 
+    /**
+     * @param array $data - contact/user info
+     * @throws waException
+     */
     protected function checkBan($data)
     {
         if ($data['is_user'] == -1) {
@@ -109,6 +139,11 @@ class waAuth implements waiAuth
         }
     }
 
+    /**
+     * @param $params
+     * @return array|bool
+     * @throws waException
+     */
     protected function _auth($params)
     {
         if ($params && isset($params['id'])) {
@@ -159,7 +194,10 @@ class waAuth implements waiAuth
         }
     }
 
-
+    /**
+     * @return array|bool
+     * @throws waException
+     */
     protected function _authByCookie()
     {
         if ($this->getOption('remember_enabled') && $token = waRequest::cookie('auth_token')) {
@@ -180,6 +218,10 @@ class waAuth implements waiAuth
     }
 
 
+    /**
+     * @param $user_info
+     * @return array
+     */
     protected function getAuthData($user_info)
     {
         return array(
@@ -190,6 +232,10 @@ class waAuth implements waiAuth
         );
     }
 
+    /**
+     * @param $user_info
+     * @return string
+     */
     public function getToken($user_info)
     {
         $hash = md5($user_info['create_datetime'] . $user_info['login'] . $user_info['password']);
