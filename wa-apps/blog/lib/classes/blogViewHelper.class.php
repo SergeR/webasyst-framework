@@ -18,6 +18,7 @@ class blogViewHelper extends waAppViewHelper
      */
     public function rss()
     {
+        waLog::deprecated(__METHOD__);
         return $this->rssUrl();
     }
 
