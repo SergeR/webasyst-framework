@@ -920,7 +920,11 @@ SQL;
     {
         $messages = array();
 
-        if ($data['blog_status'] != blogBlogModel::STATUS_PRIVATE) {
+        if (!empty($options['update_url_on_error'])) {
+
+            $data['url'] = $this->genUniqueUrl(ifempty($data['url'], $data['title']));
+
+        } else if ($data['blog_status'] != blogBlogModel::STATUS_PRIVATE) {
 
             if (!empty($data['id'])) {
                 $url_validator = new blogSlugValidator(array(
